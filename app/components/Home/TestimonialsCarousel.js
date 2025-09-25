@@ -24,12 +24,12 @@ const testimonials = [
     image: "/home/srini.png",
     text: "Chartered Grasshopper is my second Home from Chartered, the first one being Chartered Coronet. In my experience Chartered stands for Quality, Transparency & Value for Money. Their projects are unique, functional & built with the customer in mind. Their staff are friendly and easy to deal with. Most importantly Chartered projects end delivered on time.",
     name: "Mr. Srinivasu Allapan",
-    role: " Director – Sales & Marketing, JK Tyre & Industries Ltd.",
+    role: " Director – Sales & Marketing, JK Tyre & Industries Ltd.",
   },
   {
     id: 4,
     image: "/home/jagdeesh.png",
-    text: "I've owned & lived in a Chartered Apartment for close to 20 years. The apartment is thoughtfully designed, well-constructed and has generated great long term value! I have also enjoyed dealing with the promoters and staff of Chartered, who have always been professional, competent and straightforward.",
+    text: "I’ve owned & lived in a Chartered Apartment for close to 20 years. The apartment is thoughtfully designed, well-constructed and has generated great long term value! I have also enjoyed dealing with the promoters and staff of Chartered, who have always been professional, competent and straightforward.",
     name: "Mr. Jagdeesh Reddy",
     role: "Owner of Transport Business",
   },
@@ -65,8 +65,11 @@ export default function TestimonialsCarousel() {
             </h2>
           </div>
 
-          {/* Navigation + Progress - Desktop Only */}
-          <div className="items-center gap-6 mt-10 hidden lg:flex">
+          {/* Navigation + Progress */}
+          <div
+            className="items-center gap-6 mt-10 hidden lg:flex
+        "
+          >
             <button onClick={prevSlide} className="p-2">
               <ArrowLeft className="w-6 h-6" />
             </button>
@@ -91,101 +94,69 @@ export default function TestimonialsCarousel() {
             </button>
           </div>
         </div>
-
         {/* Right Section - Carousel */}
-        <div className="lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
-          <AnimatePresence mode="popLayout">
-            {/* Mobile: Show 1 testimonial */}
-            <div className="lg:hidden">
-              <motion.div
-                key={testimonials[current].id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="flex flex-col items-start gap-6 shadow-md p-5 h-[520px]"
-              >
-                <Image
-                  src={testimonials[current].image}
-                  alt={testimonials[current].name}
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover flex-shrink-0"
-                />
-                <div className="flex flex-col justify-between flex-1 h-full">
-                  <h4 className="text-[#646464] mb-4 text-lg leading-relaxed overflow-hidden">
-                    {testimonials[current].text}
-                  </h4>
+        <div className="lg:w- grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
+          <AnimatePresence mode="wait">
+          {Array.from({ length: typeof window !== "undefined" && window.innerWidth < 1024 ? 1 : 2 }).map(
+  (_, i) => {
+    const idx = (current + i) % testimonials.length;
+    return (
+      <motion.div
+        key={testimonials[idx].id}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.4 }}
+        className="flex flex-col items-start gap-6 shadow-md p-5 lg:h-[520px]"
+      >
+        <Image
+          src={testimonials[idx].image}
+          alt={testimonials[idx].name}
+          width={120}
+          height={120}
+          className="rounded-full object-cover flex-shrink-0"
+        />
+        <div className="flex flex-col justify-between flex-1 h-full">
+          <h4 className="text-[#646464] mb-4 text-lg leading-relaxed overflow-hidden">
+            {testimonials[idx].text}
+          </h4>
 
-                  <div className="mt-auto">
-                    <h4 className="text-[#ED1C24] py-3 font-semibold text-2xl nunito-regular">
-                      {testimonials[current].name}
-                    </h4>
-                    <h6 className="text-[#646464] text-lg nunito-regular">
-                      {testimonials[current].role}
-                    </h6>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+          <div className="mt-auto">
+            <h4 className="text-[#ED1C24] py-3 font-semibold text-2xl nunito-regular">
+              {testimonials[idx].name}
+            </h4>
+            <h6 className="text-[#646464] text-lg nunito-regular">
+              {testimonials[idx].role}
+            </h6>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+)}
 
-            {/* Desktop: Show 2 testimonials */}
-            <div className="hidden lg:contents">
-              {[0, 1].map((i) => {
-                const idx = (current + i) % testimonials.length;
-                return (
-                  <motion.div
-                    key={testimonials[idx].id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="flex flex-col items-start gap-6 shadow-md p-5 h-[520px]"
-                  >
-                    <Image
-                      src={testimonials[idx].image}
-                      alt={testimonials[idx].name}
-                      width={120}
-                      height={120}
-                      className="rounded-full object-cover flex-shrink-0"
-                    />
-                    <div className="flex flex-col justify-between flex-1 h-full">
-                      <h4 className="text-[#646464] mb-4 text-lg leading-relaxed overflow-hidden">
-                        {testimonials[idx].text}
-                      </h4>
-
-                      <div className="mt-auto">
-                        <h4 className="text-[#ED1C24] py-3 font-semibold text-2xl nunito-regular">
-                          {testimonials[idx].name}
-                        </h4>
-                        <h6 className="text-[#646464] text-lg nunito-regular">
-                          {testimonials[idx].role}
-                        </h6>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
           </AnimatePresence>
         </div>
       </section>
-
-      {/* Navigation + Progress - Mobile Only */}
-      <div className="flex items-center gap-6 mt-10 lg:hidden justify-center">
+      {/* Navigation + Progress */}
+      <div className="flex items-center gap-6 mt-10 lg:hidden">
         <button onClick={prevSlide} className="p-2">
           <ArrowLeft className="w-6 h-6" />
         </button>
 
         <div className="flex items-center gap-0 w-20 ">
-          {testimonials.map((_, idx) => (
-            <div
-              key={idx}
-              className={`h-[2px] flex-1 transition-all ${
-                current === idx ? "bg-red-600" : "bg-[#FAD4D6]"
-              }`}
-            />
-          ))}
+          {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
+            (_, pageIdx) => (
+              <div
+                key={pageIdx}
+                className={`h-[2px] flex-1 transition-all ${
+                  Math.floor(current / 2) === pageIdx
+                    ? "bg-red-600"
+                    : "bg-[#FAD4D6]"
+                }`}
+              />
+            )
+          )}
         </div>
 
         <button onClick={nextSlide} className="p-2">
