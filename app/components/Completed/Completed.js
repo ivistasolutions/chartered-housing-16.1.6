@@ -2,7 +2,7 @@ import { completedProject } from '@/app/utils/completedProjects'
 
 const Completed = () => {
   return (
-    <div className="my-16">
+    <div className="mb-10">
       <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4">
         {completedProject.map((project, i) => (
           <div key={i} className="border border-[#ED1C25] p-4 space-y-3">

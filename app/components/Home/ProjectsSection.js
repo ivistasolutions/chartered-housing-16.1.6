@@ -74,7 +74,7 @@ const ProjectsSection = () => {
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat"
+      className=" bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/home/ongoing-projects-bg.png')" }}
     >
       <div
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
         onMouseLeave={startAutoSlide}
       >
         {/* Left Content Box */}
-        <div className="relative w-full lg:w-[600px] overflow-visible">
+        <div className="relative w-full lg:w-[600px] overflow-visible lg:py-20">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={currentProject.id}
@@ -171,7 +171,7 @@ const ProjectsSection = () => {
             ONGOING
           </h4>
           <h2 className="roboto-serif-light text-7xl mt-2">PROJECTS</h2>
-          <div className="w-16 border-b-2 border-white mt-3 mb-6"></div>
+          <div className="w-32 border-b-2 border-white mt-3 mb-6 mx-1"></div>
           <h3 className="text-3xl leading-relaxed">
             Explore our ongoing projects to see how we bring ideas to
             life.

@@ -2,6 +2,8 @@ import Completed from "./Completed";
 import OurLocations from "./OurLocations";
 import React from "react";
 import Banner from "../Shared/Banner";
+import BreadCrumbs from "../Shared/BreadCrumbs";
+import Content from "./Content";
 
 const index = () => {
   return (
@@ -19,6 +21,8 @@ const index = () => {
         textPosition="bottom-left"
         overlayOpacity={0.2}
       />
+      <BreadCrumbs title="Completed Projects" />
+      <Content />
       <Completed />
       <OurLocations />
     </>

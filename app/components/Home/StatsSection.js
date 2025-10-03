@@ -165,7 +165,7 @@ const StatsSection = () => {
             cornerstone of our success and your peace of mind.
           </h6>
           <div className="py-5 flex justify-center">
-            <Button href="/about">Learn More</Button>
+            <Button href="/about-us">Learn More</Button>
           </div>
         </div>
       </div>

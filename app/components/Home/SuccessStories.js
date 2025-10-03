@@ -4,7 +4,7 @@ import TestimonialsSection from "./TestimonialsCarousel";
 const SuccessStories = () => {
   return (
     <>
-      <div className="py-20">
+      <div className="py-20 lg:px-0 px-5">
         <div className="container mx-auto uppercase">
           <h3 className="text-[#ED1C24] roboto-serif-medium tracking-wide text-2xl">
             Client
