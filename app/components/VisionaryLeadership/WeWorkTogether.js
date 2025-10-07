@@ -15,7 +15,7 @@ const WeWorkTogether = () => {
             We Innovate Together”
           </h2>
           <p className="text-[#646464] max-w-md mb-8">
-            Meet our professional team member who’re dedicating themselves to
+            Meet our professional team members who’re dedicating themselves to
             create innovation to help people through pushing limitation of the
             technology.
           </p>

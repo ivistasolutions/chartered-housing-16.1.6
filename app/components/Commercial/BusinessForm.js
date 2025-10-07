@@ -10,7 +10,7 @@ import {
 } from "../Form/FormField";
 import Button from "../Shared/Button";
 
-const ContactForm = () => {
+const BusinessForm = () => {
   const {
     formData,
     handleChange,
@@ -20,35 +20,16 @@ const ContactForm = () => {
     submitStatus,
     fieldErrors,
     formId,
-  } = useFormHandler(1186);
+  } = useFormHandler(1188);
 
   return (
-    <div className="mt-7 mb-10 lg:px-0 px-5">
+    <div className="lg:mt-10 lg:mb-20 mb-10 lg:px-0 px-5">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[#646464] lg:text-3xl text-2xl lg:px-0 px-5 text-center">
-          What can we help you with?
-        </h2>
-
-        <form className="mt-10" onSubmit={handleSubmit} id={formId}>
+        <form className="mt-0" onSubmit={handleSubmit} id={formId}>
           <div className="max-w-4xl mx-auto w-full flex flex-col items-center">
-            <div className="lg:w-4/6 w-full">
-              <SelectField
-                value={formData.purpose}
-                onChange={handleSelectChange}
-                formType="contact"
-                placeholder="Purpose"
-                className="border border-[#ED1C25] rounded-none bg-transparent focus:outline-0 focus-visible:outline-0 focus:ring-0"
-              />
-              {fieldErrors.purpose && (
-                <span className="text-red-500 text-xs text-start mt-1 block">
-                  {fieldErrors.purpose}
-                </span>
-              )}
-            </div>
-
             <div className="border border-[#ED1C25] py-5 px-10 w-full mt-10 flex flex-col gap-8">
-              <h3 className="lg:text-3xl text-2xl text-[#646464] font-playfair text-center">
-                Leave A Message
+              <h3 className="lg:text-3xl text-2xl text-[#646464] roboto-serif-regular lg:p-5 text-center">
+                Ready to move your business to Chartered Centre?
               </h3>
 
               <div>
@@ -58,6 +39,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                 />
+
                 {fieldErrors.name && (
                   <span className="text-red-500 text-xs text-start mt-1 block">
                     {fieldErrors.name}
@@ -88,6 +70,20 @@ const ContactForm = () => {
                 {fieldErrors.email && (
                   <span className="text-red-500 text-xs text-start mt-1 block">
                     {fieldErrors.email}
+                  </span>
+                )}
+              </div>
+              <div>
+                <TextInputField
+                  placeholder="Company Name *"
+                  name="company"
+                  type="text"
+                  value={formData.company}
+                  onChange={handleChange}
+                />
+                {fieldErrors.company && (
+                  <span className="text-red-500 text-xs text-start mt-1 block">
+                    {fieldErrors.company}
                   </span>
                 )}
               </div>
@@ -128,7 +124,7 @@ const ContactForm = () => {
                 </div>
               )}
 
-              <div className="flex justify-center">
+              <div className="flex justify-center lg:py-5">
                 <Button type="submit" disabled={isSubmitting}>
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
@@ -141,4 +137,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default BusinessForm;

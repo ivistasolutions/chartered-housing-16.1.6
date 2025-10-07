@@ -10,10 +10,6 @@ const OngoingProjects = () => {
       <Banner
         backgroundImage="/about-us/banner.png"
         mobileBackgroundImage="/about-us/mobile-banner.png"
-        logo="/logo.png"
-        logoWidth={70}
-        logoHeight={70}
-        showLogo={true}
         sectionTitle="ONGOING PROJECTS"
         title="Crafted Spaces,"
         subtitle="Currently Taking Shape"

@@ -48,7 +48,7 @@ const AboutChartered = () => {
     if (!isPaused) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % slideData.length);
-      }, 2000); // Change slide every 4 seconds
+      }, 5000); // Change slide every 4 seconds
 
       return () => clearInterval(interval);
     }
@@ -92,7 +92,7 @@ const AboutChartered = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4, }}
+                transition={{ duration: 0.8, }}
                 className="w-full"
               >
                 {/* Bottom Content */}
@@ -119,7 +119,7 @@ const AboutChartered = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4, }}
+                transition={{ duration: 0.8, }}
                 className="w-full"
               >
                 <Image

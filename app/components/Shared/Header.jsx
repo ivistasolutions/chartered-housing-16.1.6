@@ -59,8 +59,8 @@ const Header = () => {
     {
       label: "CONNECT",
       submenu: [
-        { name: "Request a Callback", href: "/request-a-callback" },
-        { name: "WhatsApp", href: "/whatsapp-us" },
+        { name: "Request a Callback", href: "/contact-us" },
+        // { name: "WhatsApp", href: "/whatsapp-us" },
         { name: "Partner with Us", href: "/partner-with-us" },
       ],
     },
@@ -94,12 +94,12 @@ const Header = () => {
       {/* Logo - Global on all pages */}
       <div className="absolute top-4 left-1/2 -translate-x-1/2 z-50">
         <Link href="/">
-          <Image
+          <img
             src="/logo.png"
             alt="CHARTERED"
-            width={logoSize.width}
-            height={logoSize.height}
-            className="cursor-pointer"
+            // width={logoSize.width}
+            // height={logoSize.height}
+            className="cursor-pointer lg:w-20 lg:h-auto w-16 h-auto"
           />
         </Link>
       </div>
@@ -109,7 +109,7 @@ const Header = () => {
         <div className="flex items-center justify-between px-6 lg:px-0 py-4 container mx-auto">
           {/* Enquire Now Button */}
           <div className="hidden lg:block">
-            <Button href="/contact">Enquire Now</Button>
+            <Button href="/contact-us">Enquire Now</Button>
           </div>
 
           {/* Animated Hamburger Menu */}
@@ -217,7 +217,7 @@ const Header = () => {
 
               {/* Mobile Enquire Now Button */}
               <div className="lg:hidden flex justify-center mt-10">
-                <Button href="/contact" onClick={handleSubmenuClick}>
+                <Button href="/contact-us" onClick={handleSubmenuClick}>
                   Enquire Now
                 </Button>
               </div>

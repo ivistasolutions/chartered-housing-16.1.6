@@ -8,7 +8,7 @@ const Content = () => {
           <div className="flex flex-col items-center justify-center">
             <h6 className="lg:text-[30px] text-[20px] text-[#646464] text-left">
               Complete interior solutions for homes, offices, and retail spaces
-              — from concept to execution, beautifully done.
+              - from concept to execution, beautifully done.
             </h6>
           </div>
         </div>

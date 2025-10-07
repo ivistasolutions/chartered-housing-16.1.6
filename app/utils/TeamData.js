@@ -9,7 +9,7 @@ export const team = [
       quote: (
         <span className="text-[#ED1C25]">
           &quot;Do not engage in Image building. If we build ourselves strong, the
-          &quot;Image will naturally be strong.&quot;
+          Image will naturally be strong.&quot;
         </span>
       ),
       bio2: `He mentors his team focussing on honesty and meticulousness and these values can be perceived easily in every aspect of Chartered Group's activities.`,

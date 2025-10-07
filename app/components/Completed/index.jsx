@@ -11,13 +11,9 @@ const index = () => {
       <Banner
         backgroundImage="/completed-project/banner.png"
         mobileBackgroundImage="/completed-project/mobile-banner.png"
-        logo="/logo.png"
-        logoWidth={70}
-        logoHeight={70}
-        showLogo={true}
         sectionTitle="COMPLETED PROJECTS"
-        title="Completed Projects"
-        subtitle="Our Completed Projects"
+        title="Remembered for generations."
+        subtitle="Every project we complete is a testament to a promise fulfilled."
         textPosition="bottom-left"
         overlayOpacity={0.2}
       />

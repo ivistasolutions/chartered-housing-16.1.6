@@ -13,11 +13,7 @@ const index = () => {
       <Banner
         backgroundImage="/why-chartered/banner.png"
         mobileBackgroundImage="/why-chartered/mobile-banner.png"
-        logo="/logo.png"
-        logoWidth={70}
-        logoHeight={70}
-        showLogo={true}
-        sectionTitle="WHY CHARTED"
+        sectionTitle="WHY CHARTERED"
         title="Since 1989,"
         subtitle="Quality Through Transparency"
         textPosition="bottom-left"

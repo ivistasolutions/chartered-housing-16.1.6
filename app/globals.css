@@ -293,3 +293,13 @@ p {
   outline: none !important;
   color: #646464 !important;
 }
+
+.floating-button {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.marker-red::marker {
+  color: #ED1C24 !important;
+  font-size: 1rem;
+}

@@ -30,7 +30,7 @@ const SendUsYourQueryForm = () => {
 
         <div>
           <TextInputField
-            placeholder="Your Name"
+            placeholder="Your Name *"
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -57,7 +57,7 @@ const SendUsYourQueryForm = () => {
         <div>
           <TextInputField
             type="email"
-            placeholder="Your Email Address"
+            placeholder="Your Email Address *"
             name="email"
             value={formData.email}
             onChange={handleChange}

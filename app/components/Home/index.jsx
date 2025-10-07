@@ -17,9 +17,6 @@ const index = () => {
           textPosition="bottom-left"
           overlayOpacity={0.2}
           showDivide={false}
-          logo="/logo.png"
-          logoWidth={70}
-          logoHeight={70}
           useVideo={true}
           backgroundVideo={"/videos/Chattered-Banner.webm"}
           mobileBackgroundVideo={"/videos/Chattered-Banner-Mobile.webm"}

@@ -6,7 +6,7 @@ const carouselItems = [
   "You’re choosing more than a builder.",
   "You're choosing a partner in transparency.",
   "A custodian of timeless design.",
-  "And a team that builds with purpose — every single time.",
+  "And a team that builds with purpose, every single time.",
 ];
 
 const CharteredCarousel = () => {

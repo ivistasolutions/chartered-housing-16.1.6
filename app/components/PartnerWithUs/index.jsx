@@ -11,10 +11,6 @@ const index = () => {
       <Banner
         backgroundImage="/partner-with-us/banner.png"
         mobileBackgroundImage="/partner-with-us/mobile-banner.png"
-        logo="/logo.png"
-        logoWidth={70}
-        logoHeight={70}
-        showLogo={true}
         sectionTitle="PARTNER WITH US"
         title="Let’s Build"
         subtitle="Something Enduring Together"

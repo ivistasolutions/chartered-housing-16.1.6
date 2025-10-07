@@ -15,7 +15,7 @@ const index = () => {
         logoWidth={70}
         logoHeight={70}
         showLogo={true}
-        sectionTitle="CHARTED INTERIORS"
+        sectionTitle="CHARTERED INTERIORS"
         title=""
         subtitle="Designs That Live With You"
         textPosition="bottom-left"

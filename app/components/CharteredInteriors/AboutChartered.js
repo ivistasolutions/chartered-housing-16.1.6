@@ -26,7 +26,7 @@ const AboutChartered = () => {
                 With over a decade of experience in design and real estate,
                 Chartered Interiors offers a detail-oriented, transparent
                 approach to interiors. From spatial planning to the finishing
-                touches, we take care of it all — so your space not only looks
+                touches, we take care of it all, so your space not only looks
                 good but works well.
               </p>
               <p>

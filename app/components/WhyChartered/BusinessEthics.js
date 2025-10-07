@@ -85,7 +85,7 @@ const BusinessEthics = () => {
                   height={50}
                   className="mb-3"
                 />
-                <h3 className="text-2xl font-bold text-[#ED1C25] mb-3 uppercase pt-3">
+                <h3 className="text-2xl font-bold text-[#ED1C25] mb-3 uppercase pt-2">
                   Passion for Quality
                 </h3>
                 <h6 className="text-lg text-[#646464]">
@@ -124,7 +124,7 @@ const BusinessEthics = () => {
                   height={70}
                   className="mb-3"
                 />
-                <h3 className="text-2xl font-bold text-[#ED1C25] mb-3 uppercase pt-3">
+                <h3 className="text-2xl font-bold text-[#ED1C25] mb-3 uppercase pt-4.5">
                   Attention to Light & Ventilation
                 </h3>
                 <h6 className="text-lg text-[#646464]">

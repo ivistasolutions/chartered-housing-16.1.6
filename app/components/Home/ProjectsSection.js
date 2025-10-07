@@ -167,7 +167,7 @@ const ProjectsSection = () => {
 
         {/* Right Content */}
         <div className="text-left w-full lg:w-1/2 text-white">
-          <h4 className="roboto-serif-light text-4xl text-[#ED1C25]">
+          <h4 className="roboto-serif-light lg:text-4xl text-3xl text-[#ED1C25]">
             ONGOING
           </h4>
           <h2 className="roboto-serif-light text-7xl mt-2">PROJECTS</h2>

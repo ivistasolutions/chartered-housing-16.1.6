@@ -30,7 +30,7 @@ const Influence = () => {
                 During his tenure as{" "}
                 <span className="font-bold">
                   President of CREDAI Karnataka (2006–2008),
-                </span>
+                </span> {" "}
                 Mr. Hegde was instrumental in driving several major policy
                 reforms and industry benefits. He successfully rolled back the{" "}
                 <span className="font-bold">
@@ -44,15 +44,15 @@ const Influence = () => {
                 several members. He also{" "}
                 <span className="font-bold">
                   persuaded the government to adopt the principle of deemed land
-                  use change in accordance with the Master Plans
-                </span>
-                —streamlining and accelerating regulatory clearances for
+                  use change in accordance with the Master Plans,
+                </span>{" "}
+                streamlining and accelerating regulatory clearances for
                 developers across the state.
               </h6>
               <h6>
                 He further expanded CREDAI’s reach by inducting new city
                 associations in Hubli & Dharwad, Mysore, Mangalore, and
-                Udupi—bringing regional representation to the fore for the first
+                Udupi, bringing regional representation to the fore for the first
                 time in 27 years. This expansion laid the groundwork for a more
                 inclusive and collaborative industry body across Karnataka.
               </h6>

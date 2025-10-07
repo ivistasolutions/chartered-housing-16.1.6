@@ -35,7 +35,7 @@ const Grid = () => {
         "A plotted development that balances tranquillity with connectivity, Chartered Birdsong spans 18 acres and 38 guntas at Sadenahalli with 265 well-laid plots. Located just 15 minutes from Yelahanka and the Airport Road, it features underground infrastructure, landscaped green zones, and around 7000 sqft. clubhouse with a swimming pool, including changing rooms, a party hall, two furnished guest rooms, indoor games area, gym, and children's play spaces.",
       ],
       highlightText:
-        "Premium plots just 15 mins off Yelahanka–Doddaballapur Road designed for those who want to build, not just buy.",
+        "Premium plots just 15 mins off Yelahanka–Doddaballapur Road.",
       buttonLink: "/projects/ongoing/palace-road",
       isReversed: true,
     },

@@ -8,12 +8,8 @@ const UpcomingProjects = () => {
   return (
     <>
       <Banner
-        backgroundImage="/about-us/banner.png"
-        mobileBackgroundImage="/about-us/mobile-banner.png"
-        logo="/logo.png"
-        logoWidth={70}
-        logoHeight={70}
-        showLogo={true}
+        backgroundImage="/upcoming-projects/banner.png"
+        mobileBackgroundImage="/upcoming-projects/mobile-banner.png"
         sectionTitle="UPCOMING PROJECTS"
         title="Shaping the Future,"
         subtitle="One Landmark at a Time"

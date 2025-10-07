@@ -48,7 +48,7 @@ const Grid = () => {
         {upcomingProjects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col shadow-md lg:p-4 p-4 lg:w-1/3"
+            className="flex flex-col shadow-md lg:p-4 p-4 lg:w-1/3 border border-[#e8e4e4]"
           >
             {/* <Image
               src={project.image || "/upcoming-project/row-villas.png"}
@@ -71,7 +71,7 @@ const Grid = () => {
 
               {/* Button aligned bottom */}
               <div className="pt-5">
-                <Button href={project.buttonLink}>Know More</Button>
+                <Button href="/contact-us">Know More</Button>
               </div>
             </div>
           </div>
