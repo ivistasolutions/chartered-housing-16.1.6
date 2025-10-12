@@ -1,12 +1,12 @@
 
-import { ch1956projectDetails } from "@/app/utils/projectDetails"
+import { chBirdsongProjectDetails } from "@/app/utils/projectDetails"
 import Image from "next/image"
 
 const ProjectDetails = () => {
   return (
     <div className="relative hidden lg:block">
       <Image
-        src="/chartered-1956/project-overview.png"
+        src="/chartered-birdsong/Project Overview-bg-img.png"
         alt="Project Overview Background"
         fill
         className="object-cover object-center -z-10 lg:block hidden"
@@ -23,15 +23,15 @@ const ProjectDetails = () => {
         </h3>
         <div className="mt-10 border border-[#ED1C25] p-10 bg-white">
           <div className="grid grid-cols-5">
-            {ch1956projectDetails.map((item, i) => (
+            {chBirdsongProjectDetails.map((item, i) => (
               <div
                 key={i}
                 className={`flex flex-col gap-3 p-5
               ${i % 5 !== 4 ? "border-r border-[#ED1C25]" : ""} 
               ${
                 i <
-                ch1956projectDetails.length -
-                  (ch1956projectDetails.length % 5 || 5)
+                chBirdsongProjectDetails.length -
+                  (chBirdsongProjectDetails.length % 5 || 5)
                   ? "border-b border-[#ED1C25]"
                   : ""
               }`}

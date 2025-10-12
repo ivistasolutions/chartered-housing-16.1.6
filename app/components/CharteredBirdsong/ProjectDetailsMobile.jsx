@@ -1,5 +1,5 @@
 
-import { ch1956projectDetails } from "@/app/utils/projectDetails"
+import { chBirdsongProjectDetails } from "@/app/utils/projectDetails"
 import Image from "next/image"
 
 const ProjectDetails = () => {
@@ -23,7 +23,7 @@ const ProjectDetails = () => {
         </h3>
         <div className="mt-10 border border-[#ED1C25] lg:p-10 p-5 bg-white">
           <div className="grid lg:grid-cols-5 grid-cols-2">
-            {ch1956projectDetails.map((item, i) => (
+            {chBirdsongProjectDetails.map((item, i) => (
               <div
                 key={i}
                 className={`flex flex-col gap-3 p-5
@@ -31,15 +31,15 @@ const ProjectDetails = () => {
               ${i % 5 !== 4 ? "lg:border-r lg:border-[#ED1C25]" : ""} 
               ${
                 i <
-                ch1956projectDetails.length -
-                  (ch1956projectDetails.length % 2 || 2)
+                chBirdsongProjectDetails.length -
+                  (chBirdsongProjectDetails.length % 2 || 2)
                   ? "border-b border-[#ED1C25] lg:border-b-0"
                   : ""
               }
               ${
                 i <
-                ch1956projectDetails.length -
-                  (ch1956projectDetails.length % 5 || 5)
+                chBirdsongProjectDetails.length -
+                  (chBirdsongProjectDetails.length % 5 || 5)
                   ? "lg:border-b lg:border-[#ED1C25]"
                   : ""
               }`}

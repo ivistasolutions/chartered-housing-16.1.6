@@ -52,43 +52,58 @@ export const ch1956projectDetails = [
 
 export const chBirdsongProjectDetails = [
   {
-    icon: "/projects/ongoing/chb/project-details/icon01.svg",
+    icon: "/chartered-birdsong/img1.svg",
     title:
-      '<span class="text-red">18 acres and 38 <br /> guntas </span> master-planned development',
+      '<span class="text-[#ED1C25]">18 acres and 38 <br /> guntas </span> master-planned development',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon02.svg",
+    icon: "/chartered-birdsong/img2.svg",
     title:
-      'Located just off the <br /> <span class="text-red">Yelahanka–Doddaballapur</span> <br /> Highway Road',
+      'Located just off the <br /> <span class="text-[#ED1C25]">Yelahanka–Doddaballapur</span> <br /> Highway Road',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon03.svg",
+    icon: "/chartered-birdsong/img3.svg",
     title:
-      '<span class="text-red">265 premium</span> plots <br /> (1200, 1500, 2400 <br /> sq. ft. and other sizes)',
+      '<span class="text-[#ED1C25]">265 premium</span> plots <br /> (1200, 1500, 2400 <br /> sq. ft. and other sizes)',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon04.svg",
+    icon: "/chartered-birdsong/img4.svg",
     title:
-      '<span class="text-red">Underground utilities</span> <br /> for electricity, water, <br /> and sewage',
+    'Underground utilities <br /> for <span class="text-[#ED1C25]">electricity, water, <br /> and sewage</span>',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon05.svg",
+    icon: "/chartered-birdsong/img5.svg",
     title:
-      'Underground utilities <br /> for <span class="text-red">electricity, water, <br /> and sewage</span>',
+    '<span class="text-[#ED1C25]">Electric cabling and street lighting</span>  via underground conduits',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon06.svg",
+    icon: "/chartered-birdsong/img6.svg",
     title:
-      'Asphalted roads and <br /> <span class="text-red">pedestrian footpaths</span>',
+      'Asphalted roads and <br /> <span class="text-[#ED1C25]">pedestrian footpaths</span>',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon07.svg",
+    icon: "/chartered-birdsong/img7.svg",
     title:
-      'Landscaped <span class="text-red">parks</span> <br /> and <span class="text-red">green</span> corridors',
+      'Landscaped <span class="text-[#ED1C25]">parks</span> <br /> and <span class="text-[#ED1C25]">green</span> corridors',
   },
   {
-    icon: "/projects/ongoing/chb/project-details/icon08.svg",
+    icon: "/chartered-birdsong/img8.svg",
     title:
-      'Just <span class="text-red">30 minutes</span> from <br /> Kempegowda <br /> International Airport',
+    'Asphalted <span class="text-[#ED1C25]">internal roads</span> as per <span class="text-[#ED1C25]">  approved layout</span> ',
+  },
+  {
+    icon: "/chartered-birdsong/img9.svg",
+    title:
+      '<span class="text-[#ED1C25]">Underground rainwater </span> and<br /> sewerage systems',
+  },
+  {
+    icon: "/chartered-birdsong/img10.svg",
+    title:
+    'Individual plot provision for  <br /> <span class="text-[#ED1C25]">electric and water connections</span>',
+  },
+  {
+    icon: "/chartered-birdsong/img11.svg",
+    title:
+    'Clearly demarcated  <br /> <span class="text-[#ED1C25]">pedestrian pathways*</span>',
   },
 ]
