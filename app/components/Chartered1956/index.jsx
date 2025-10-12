@@ -5,11 +5,14 @@ import Content from "./Content";
 import ProjectOverview from "./ProjectOverview";
 import ProjectDetails from "./ProjectDetails";
 import ProjectDetailsMobile from "./ProjectDetailsMobile";
+import Carousel from "./Carousel";
+import Amenities from "./Amenities";
+import ImportantSpecification from "./ImportantSpecification";
 const Chartered1956 = () => {
   return (
     <div>
       <Banner
-        backgroundImage="/chartered-1956/banner.png"
+        backgroundImage="/chartered-1956/mobile-banner.png"
         mobileBackgroundImage="/chartered-1956/mobile-banner.png"
         sectionTitle="CHARTERED 1956"
         title="A timeless residence where"
@@ -22,6 +25,9 @@ const Chartered1956 = () => {
       {/* <ProjectOverview /> */}
       <ProjectDetails />
       <ProjectDetailsMobile />
+      <Carousel />
+      <Amenities />
+      <ImportantSpecification />
     </div>
   );
 };
