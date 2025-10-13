@@ -25,7 +25,7 @@ const ImportantSpecification = () => {
         <section className="md:py-16 py-0">
             <div className="max-w-6xl mx-auto bg-[#DBDBDB] md:p-10 shadow-sm py-20">
                 <h2 className="text-3xl text-center text-[#ED1C25] mb-6 roboto-serif-regular">
-                    Important Specification
+                    Important Specifications
                 </h2>
                 <div className="border-t border-[#ED1C25] w-3/4 mx-auto mb-10"></div>
 

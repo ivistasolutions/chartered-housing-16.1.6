@@ -1,7 +1,7 @@
 export const ch1956projectDetails = [
   {
     icon: "/chartered-1956/icon-1.svg",
-    title: '<span class="text-[#ED1C25]">9-floor</span>',
+    title: '<span class="text-[#ED1C25]">9-floors</span>',
   },
   {
     icon: "/chartered-1956/icon-2.svg",
@@ -26,7 +26,7 @@ export const ch1956projectDetails = [
   {
     icon: "/chartered-1956/icon-6.svg",
     title:
-      '<span class="text-[#ED1C25]"> 2 floors</span> <br /> exclusively <br /> reserved for <br />  <span class="text-[#ED1C25]">Common Spaces, Amenities</span> etc.',
+      '<span class="text-[#ED1C25]"> 2 floors</span> <br /> exclusively <br /> reserved for <br />  <span class="text-[#ED1C25]">Common Spaces, Amenities etc.</span>',
   },
   {
     icon: "/chartered-1956/icon-7.svg",
@@ -69,12 +69,12 @@ export const chBirdsongProjectDetails = [
   {
     icon: "/chartered-birdsong/img4.svg",
     title:
-    'Underground utilities <br /> for <span class="text-[#ED1C25]">electricity, water, <br /> and sewage</span>',
+      'Underground utilities <br /> for <span class="text-[#ED1C25]">electricity, water, <br /> and sewage</span>',
   },
   {
     icon: "/chartered-birdsong/img5.svg",
     title:
-    '<span class="text-[#ED1C25]">Electric cabling and street lighting</span>  via underground conduits',
+      '<span class="text-[#ED1C25]">Electric cabling and street lighting</span>  via underground conduits',
   },
   {
     icon: "/chartered-birdsong/img6.svg",
@@ -89,7 +89,7 @@ export const chBirdsongProjectDetails = [
   {
     icon: "/chartered-birdsong/img8.svg",
     title:
-    'Asphalted <span class="text-[#ED1C25]">internal roads</span> as per <span class="text-[#ED1C25]">  approved layout</span> ',
+      'Asphalted <span class="text-[#ED1C25]">internal roads</span> as per <span class="text-[#ED1C25]">  approved layout</span> ',
   },
   {
     icon: "/chartered-birdsong/img9.svg",
@@ -99,11 +99,11 @@ export const chBirdsongProjectDetails = [
   {
     icon: "/chartered-birdsong/img10.svg",
     title:
-    'Individual plot provision for  <br /> <span class="text-[#ED1C25]">electric and water connections</span>',
+      'Individual plot provision for  <br /> <span class="text-[#ED1C25]">electric and water connections</span>',
   },
   {
     icon: "/chartered-birdsong/img11.svg",
     title:
-    'Clearly demarcated  <br /> <span class="text-[#ED1C25]">pedestrian pathways*</span>',
+      'Clearly demarcated  <br /> <span class="text-[#ED1C25]">pedestrian pathways*</span>',
   },
 ]
