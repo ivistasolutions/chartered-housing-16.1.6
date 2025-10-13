@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 const images = [
+    "/chartered-birdsong/img3.png",
     "/chartered-birdsong/img1.png",
     "/chartered-birdsong/img2.png",
-    "/chartered-birdsong/img3.png",
     "/chartered-birdsong/img4.png",
 ];
 
