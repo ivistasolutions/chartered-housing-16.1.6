@@ -27,12 +27,12 @@ const FavoriteProjects = () => {
 
         {/* Center text - top (desktop only) */}
         <div className="lg:flex flex-col justify-center items-center text-center px-4 hidden md:block">
-          <h2 className="text-red-600 text-xl md:text-2xl font-semibold">
-            A Few of Our <br /> Favorite Projects
-          </h2>
-          <p className="text-gray-500 text-sm mt-2 tracking-wider">
+          <p className="text-gray-500 text-sm mt-2 tracking-wider ">
             PORTFOLIO HIGHLIGHTS
           </p>
+          <h2 className="text-red-600 text-xl md:text-2xl font-semibold roboto-serif-medium">
+            A Few of Our <br /> Favorite Projects
+          </h2>
         </div>
 
         {/* Top right image */}

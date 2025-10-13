@@ -134,7 +134,7 @@ export default function RecentInitiatives() {
               <div className="text-left py-5 pl-5">
                 <ul className="list-disc list-outside flex flex-col gap-5 py-3 marker-red">
                   {initiative.points.map((point, i) => (
-                    <li key={i} className="marker-red">
+                    <li key={i} className="marker-red text-lg">
                       {point}
                     </li>
                   ))}

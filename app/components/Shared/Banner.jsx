@@ -91,7 +91,7 @@ const Banner = ({
 
           {mobileBackgroundImage && (
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
+              className="absolute inset-0 h-[90vh] bg-no-repeat bg-cover lg:hidden"
               style={{
                 backgroundImage: `url(${mobileBackgroundImage})`,
                 backgroundColor: "#f0f9f0",

@@ -67,7 +67,7 @@ const AboutChartered = () => {
   return (
     <div
       className="lg:px-0 px-5 lg:pb-20 pb-5"
-      onMouseEnter={() => setIsPaused(true)}
+      onMouseEnter={() => setIsPaused(false)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container mx-auto">

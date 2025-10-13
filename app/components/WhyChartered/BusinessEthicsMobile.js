@@ -106,7 +106,7 @@ const BusinessEthicsMobile = () => {
                     Quality is ensured with strict quality control in choosing
                     materials, unwavering systems followed in construction
                     processes and minute attention to finishing detail, are
-                    among many other quality practices
+                    among many other quality practices.
                   </h6>
                 </div>
                 <div className="text-left">

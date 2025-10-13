@@ -14,7 +14,7 @@ const achievements = [
   {
     title: (
       <>
-        <span className="pr-10">Total Area</span>
+        <span className="lg:pr-10">Total Area</span>
       </>
     ),
     desc: (
@@ -29,7 +29,7 @@ const achievements = [
   {
     title: (
       <>
-        <span className="pr-7">Floor Plate</span>
+        <span className="lg:pr-7">Floor Plate</span>
       </>
     ),
     desc: (
@@ -43,7 +43,7 @@ const achievements = [
   {
     title: (
       <>
-        <span className="pr-7">Car Park Ratio</span>
+        <span className="lg:pr-7">Car Park Ratio</span>
       </>
     ),
     desc: (
