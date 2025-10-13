@@ -51,7 +51,7 @@ const Banner = ({
       {useVideo && !shouldUseImageFallback ? (
         <>
           <video
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
             autoPlay
             muted
             loop

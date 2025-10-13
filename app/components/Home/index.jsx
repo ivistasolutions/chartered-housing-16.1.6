@@ -11,7 +11,7 @@ const index = () => {
       <div className="container mx-auto">
       <Banner
         backgroundImage="/banners/chartered-thumbnail-desktop.jpg"   // 👈 fallback image for desktop
-        mobileBackgroundImage="/banners/chartered-thumbnail-mobile.jpg" // 👈 fallback image for mobile
+        mobileBackgroundImage="/home/phone-banner.jpg" // 👈 fallback image for mobile
         title={false}
         subtitle={false}
         textPosition="bottom-left"
@@ -21,6 +21,7 @@ const index = () => {
         backgroundVideo="/videos/Chattered-Banner.webm"
         backgroundVideoSafari="/videos/demo.mp4"
         mobileBackgroundVideo="/videos/Chattered-Banner-Mobile.webm"
+        mobileBackgroundVideoSafari="/videos/phone-banner.mp4"
       />
       </div>
       <Content />
