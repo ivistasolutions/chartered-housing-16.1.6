@@ -100,7 +100,7 @@ const MoreThanRealEstate = () => {
 
       {/* Infinite Carousel */}
       <div className="lg:mt-12 flex md:gap-10 lg:gap-28 flex-col lg:flex-row justify-center md:justify-end max-w-7xl mx-auto">
-        <div className="w-[40%]">
+        <div className="lg:w-[40%]">
           <h5 className="text-[#646464] lg:text-3xl text-2xl max-w-5xl pt-5">
             Chartered today  delivers <br /> a  diverse portfolio, including:
           </h5>
