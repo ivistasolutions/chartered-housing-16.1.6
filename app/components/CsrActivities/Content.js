@@ -6,7 +6,7 @@ const Content = () => {
       <div className="lg:px-0 px-5">
         <div className="container mx-auto lg:py-20 py-5">
           <div className="flex flex-col items-center justify-center gap-7">
-            <h6 className=" lg:text-[30px] text-[20px] text-[#646464] text-left">
+            <h6 className=" lg:text-[24px] text-[20px] text-[#646464] text-left">
               At Chartered Housing, we believe real estate is not just about
               structures - it&apos;s about people. From the start, our mission
               has been clear: put ethics before profits, and impact before
@@ -14,10 +14,10 @@ const Content = () => {
               the environment, and everyday lives.
             </h6>
             <div>
-              <h3 className="text-[#ED1C24] roboto-serif-light mb-5 tracking-wide lg:text-3xl text-2xl text-center">
+              <h3 className="text-[#ED1C24] roboto-serif-light mb-5 tracking-wide lg:text-[36px] text-2xl text-center">
                 People Before Profit
               </h3>
-              <h6 className=" lg:text-[30px] text-[20px] text-[#646464] text-left">
+              <h6 className=" lg:text-[24px] text-[20px] text-[#646464] text-left">
                 Our CSR philosophy stems from our founding values. Whether it’s
                 protecting green cover, uplifting rural communities, or
                 nurturing children on-site, our initiatives are human-first.

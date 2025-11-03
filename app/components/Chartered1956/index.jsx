@@ -15,7 +15,9 @@ const Chartered1956 = () => {
       <Banner
         backgroundImage="/chartered-1956/banner.png"
         mobileBackgroundImage="/chartered-1956/mobile-banner.png"
-        sectionTitle="CHARTERED 1956"
+        logo="/chartered-1956/1956-logo-white.svg"
+        // sectionTitle="CHARTERED 1956"
+        showDivide={false}
         title="A timeless residence where"
         subtitle="royal heritage meets refined "
         subtitle2="modern living"

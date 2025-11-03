@@ -130,7 +130,7 @@ const StatsSection = () => {
               }}
             >
               <div className="pt-5 px-5">
-                <h3 className="text-5xl font-bold">
+                <h3 className="text-[36px] font-bold">
                   {isVisible ? (
                     <>
                       {counts[item.id]}
@@ -141,7 +141,7 @@ const StatsSection = () => {
                     "0"
                   )}
                 </h3>
-                <h5 className="mt-2 text-gray-700 text-2xl">{item.text}</h5>
+                <h5 className="mt-0 text-gray-700 text-2xl">{item.text}</h5>
               </div>
               <Image
                 src={item.image}
@@ -156,10 +156,10 @@ const StatsSection = () => {
 
         {/* Bottom Content */}
         <div className="text-center lg:pt-52 pt-15">
-          <h2 className="text-5xl roboto-serif-regular text-[#ED1C24]">
+          <h2 className="text-[36px] roboto-serif-regular text-[#ED1C24]">
             Since 1989
           </h2>
-          <h6 className="mt-4 max-w-3xl mx-auto text-2xl">
+          <h6 className="mt-0 max-w-3xl mx-auto text-2xl">
             Chartered Housing has operated on the principle of uncompromising
             quality through transparency. This core value remains the
             cornerstone of our success and your peace of mind.

@@ -16,8 +16,9 @@ const ProjectsSection = () => {
       id: 1,
       image: "/home/ongoing.png",
       alt: "Birdsong",
-      logo: "/ongoing-project/bird-song.svg",
+      // logo: "/ongoing-project/bird-song.svg",
       logoAlt: "Birdsong Logo",
+      ProjectTitle: "Chartered Birdsong",
       title: "Where nature meets design",
       description:
         "A premium plotted development spread across 18 acres and 38 guntas at Sadenahalli, just 15 minutes from Yelahanka. With 265 well-laid plots, underground infrastructure, landscaped paths, and a modern clubhouse, Birdsong is designed for those who want to build their forever home in a thoughtfully planned community.",
@@ -32,8 +33,9 @@ const ProjectsSection = () => {
       id: 2,
       image: "/home/legacy.png",
       alt: "Palace Road",
-      logo: "/ongoing-project/chartered-1956.svg",
+      // logo: "/ongoing-project/chartered-1956.svg",
       logoAlt: "Chartered 1956 Logo",
+      ProjectTitle: "Chartered 1956",
       title: "An exclusive luxury residence",
       description:
         "Set in the heart of Palace Road, Chartered 1956 is a rare 9-floor development with just 7 boutique residences - one per floor. Rooted in royal lineage and inspired by timeless design, each 5584 sq. ft. apartment offers 4 spacious bedrooms, private lift access, a personal lobby, and a separate service zone for staff and deliveries.",
@@ -102,11 +104,11 @@ const ProjectsSection = () => {
                   src={currentProject.image}
                   alt={currentProject.alt}
                   width={600}
-                  height={400}
-                  className="w-[600px]"
-                />
+                    height={400}
+                    className="w-[600px]"
+                  />
                 {/* Desktop Logo */}
-                <div className="absolute top-5 -right-20 bg-white px-4 py-2 hidden lg:block">
+                {/* <div className="absolute top-5 -right-20 bg-white px-4 py-2 hidden lg:block">
                   <Image
                     src={currentProject.logo}
                     alt={currentProject.logoAlt}
@@ -115,24 +117,27 @@ const ProjectsSection = () => {
                   />
                 </div>
                 {/* Mobile Logo */}
-                <div className="absolute -bottom-10 left-5 bg-white px-4 py-2 block lg:hidden">
+                {/* <div className="absolute -bottom-10 left-5 bg-white px-4 py-2 block lg:hidden">
                   <Image
                     src={currentProject.logo}
                     alt={currentProject.logoAlt}
                     width={currentProject.mobileLogoWidth}
                     height={currentProject.mobileLogoHeight}
                   />
-                </div>
+                </div>  */}
               </div>
 
               {/* Text Content */}
               <div className="lg:mt-5 mt-20">
+                <h2 className="roboto-serif-light text-[24px] text-[#000]">
+                  {currentProject.ProjectTitle}
+                </h2>
                 <h2 className="roboto-serif-light text-4xl text-[#ED1C25]">
                   {currentProject.title}
                 </h2>
-                <p className="text-gray-700 mt-3 text-sm leading-relaxed">
+                <h6 className="text-gray-700 mt-3 text-[18px] leading-relaxed">
                   {currentProject.description}
-                </p>
+                </h6>
                 <div className="py-5">
                   <Link href={currentProject.buttonLink}>
                     <Button>Know More</Button>
@@ -174,9 +179,9 @@ const ProjectsSection = () => {
           <h4 className="roboto-serif-light lg:text-4xl text-2xl text-[#ED1C25]">
             ONGOING
           </h4>
-          <h2 className="roboto-serif-light lg:text-7xl text-4xl mt-2">PROJECTS</h2>
+          <h2 className="roboto-serif-light lg:text-[60px] text-4xl mt-2">PROJECTS</h2>
           <div className="lg:w-44 w-32 border-b-2 border-white mt-3 mb-6 mx-1"></div>
-          <h3 className="lg:text-3xl text-2xl leading-relaxed">
+          <h3 className="lg:text-[24px] text-2xl leading-relaxed">
             Explore our ongoing projects to see how we bring ideas to
             life.
           </h3>

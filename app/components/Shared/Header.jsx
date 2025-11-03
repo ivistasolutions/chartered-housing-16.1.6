@@ -98,7 +98,7 @@ const Header = () => {
       }`}>
         <Link href="/">
           <img
-            src="/logo.png"
+            src="/logo.svg"
             alt="CHARTERED"
             className={`cursor-pointer transition-all duration-500 ease-in-out ${
               isScrolled 

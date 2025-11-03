@@ -19,8 +19,8 @@ const sectionData = {
       ],
       ending:
       <>
-      <p className="">
-      Empowering children through education is one of the most enduring ways to build better lives. This initiative is just the beginning.</p></>,
+      <h6 className="lg:text-[18px] text-[20px] text-[#646464] font-light">
+      Empowering children through education is one of the most enduring ways to build better lives. This initiative is just the beginning.</h6></>,
     },
     {
       title: "Environmental Stewardship",
@@ -106,7 +106,7 @@ export default function RecentInitiatives() {
       {sectionData.initiatives.map((initiative, index) => (
         <div key={index}>
           <div>
-            <h6 className="text-3xl text-[#646464] font-light text-center pb-5">
+            <h6 className="lg:text-[24px] text-[20px] text-[#646464] font-light text-center pb-5">
               {initiative.mainTitle}
             </h6>
           </div>
@@ -124,15 +124,15 @@ export default function RecentInitiatives() {
 
             {/* Text Section */}
             <div className="lg:w-[60%]  lg:px-0 px-5 lg:pb-10 pb-5">
-              <h3 className="text-[#ED1C24] mb-5 tracking-wide text-3xl lg:pt-10">
+              <h3 className="text-[#ED1C24] mb-5 tracking-wide lg:text-[24px] text-[20px] lg:pt-10">
                 {initiative.title}
               </h3>
-              <h4 className="text-xl text-[#646464] font-light">
+              <h4 className="lg:text-[18px] text-[20px] text-[#646464] font-light">
                 {initiative.description}
               </h4>
 
               <div className="text-left py-5 pl-5">
-                <ul className="list-disc list-outside flex flex-col gap-5 py-3 marker-red">
+                <ul className="list-disc list-outside flex flex-col gap-3 py- marker-red">
                   {initiative.points.map((point, i) => (
                     <li key={i} className="marker-red text-lg">
                       {point}
@@ -141,7 +141,7 @@ export default function RecentInitiatives() {
                 </ul>
               </div>
 
-              {initiative.ending && <p>{initiative.ending}</p>}
+              {initiative.ending && <h6 className="text-[18px]">{initiative.ending}</h6>}
             </div>
           </div>
         </div>

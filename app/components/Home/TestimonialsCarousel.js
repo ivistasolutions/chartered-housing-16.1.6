@@ -59,18 +59,18 @@ export default function TestimonialsCarousel() {
       <section className="container mx-auto lg:pt-20 pt-3 flex flex-col lg:flex-row items-start gap-12">
         {/* Left Section */}
         <div className="lg:w-[40%] flex lg:flex-col flex-row items- justify-end">
-          <div className="flex lg:flex-col flex-row lg:items-start items-center justify-center gap-5">
+          <div className="flex flex-col  lg:items-start items-start justify-start lg:gap-5">
             <div className="leading-none font-bold text-black">
               <Image
                 src="/home/quote.svg"
                 alt="quote"
                 width={150}
                 height={150}
-                className=""
+                className="w-32 h-32 lg:w-40"
               />
             </div>
-            <h2 className="text-[#ED1C24] roboto-serif-light text-[31px] font-medium mt-10">
-              What our <br className="lg:block hidden" /> customers <br className="lg:hidden block" /> are <br className="lg:block hidden" /> saying
+            <h2 className="text-[#ED1C24] roboto-serif-light lg:text-[36px] text-[31px] font-medium lg:mt-10 leading-tight">
+              What our <br className="hidden lg:block" /> customers <br className="hidden lg:block" /> are  saying
             </h2>
           </div>
 

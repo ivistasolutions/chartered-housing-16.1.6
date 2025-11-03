@@ -41,12 +41,12 @@ export const ch1956projectDetails = [
   {
     icon: "/chartered-1956/icon-9.svg",
     title:
-      'Two numbers 8 passenger <br /> lifts <span class="text-[#ED1C25]">one reserved for the owners & guests and the other for service purposes.</span> <br /> One of the two will be stretcher compliant',
+      'Two 8-passenger elevators, <span class="text-[#ED1C25]">one for owners & guests, and one for service.</span>  One is stretcher-compliant',
   },
   {
     icon: "/chartered-1956/icon-10.svg",
     title:
-      '<span class="text-[#ED1C25]">CCTV </span> <br /> surveillance for common areas',
+      '<span class="text-[#ED1C25]">CCTV </span> <br /> surveillance for <br /> common areas',
   },
 ]
 

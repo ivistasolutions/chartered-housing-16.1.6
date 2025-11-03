@@ -18,7 +18,7 @@ const ProjectDetails = () => {
         className="object-cover object-center -z-10 lg:hidden"
       />
       <div className="relative max-w-7xl mx-auto py-40">
-        <h3 className="lg:text-[40px] text-[30px] text-[#ffff] roboto-serif-medium text-center">
+        <h3 className="lg:text-[36px] text-[30px] text-[#ffff] roboto-serif-medium text-center">
           Project Overview
         </h3>
         <div className="mt-10 border border-[#ED1C25] p-10 bg-white">
@@ -44,10 +44,10 @@ const ProjectDetails = () => {
                     alt={`icon ${i + 1}`}
                   />
                 </div>
-                <p
+                <h6
                   dangerouslySetInnerHTML={{ __html: item.title }}
-                  className="text-[#646464]"
-                ></p>
+                  className="text-[#646464] text-[18px]"
+                ></h6>
               </div>
             ))}
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Banner = ({
@@ -18,6 +19,7 @@ const Banner = ({
   overlayOpacity = 0.2,
   showDivide = true,
   useVideo = false,
+  logo = null,
 }) => {
   const [videoFailed, setVideoFailed] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
@@ -115,12 +117,14 @@ const Banner = ({
       {/* Text Overlay */}
       <div className={`${getTextPositionClasses()} text-white z-10 px-4`}>
         <div className="flex justify-start mb-4 items-center">
+        {logo && <Image src={logo} alt="Logo" width={100} height={100} />}  
           <span className="font-medium uppercase tracking-wider mr-4 lg:text-[16px] text-[15px]">
             {sectionTitle}
           </span>
           {showDivide && <div className="w-8 h-1 bg-red-500"></div>}
         </div>
         <h2 className="text-xl lg:text-4xl font-semibold mb-2">{title}</h2>
+       
 
         <div className="flex lg:flex-row flex-col justify-between lg:items-center lg:gap-48 gap-0">
           <h6 className="text-2xl lg:text-[45px] font-bold">
@@ -145,7 +149,7 @@ const Banner = ({
             href="tel:+919591596777"
             className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300 cursor-pointer"
           >
-            <span className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
+            <span className="flex items-center gap-2 lg:text-[16px] text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 // width="25"
@@ -168,7 +172,7 @@ const Banner = ({
             rel="noopener noreferrer"
             className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300 cursor-pointer"
           >
-            <span className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
+            <span className="flex items-center gap-2 lg:text-[16px] text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 // width="25"
@@ -210,7 +214,7 @@ const Banner = ({
             href="/contact-us"
             className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300 cursor-pointer"
           >
-            <span className="flex items-center gap-2 lg:text-xl text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
+            <span className="flex items-center gap-2 lg:text-[16px] text-sm roboto-serif-light hover:bg-red-500 p-1.5 hover:text-white transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 // width="28"

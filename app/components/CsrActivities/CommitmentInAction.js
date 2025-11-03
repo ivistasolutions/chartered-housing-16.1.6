@@ -6,7 +6,7 @@ const CommitmentInAction = () => {
   return (
     <div>
       <div className="container mx-auto text-center">
-        <h3 className="text-[#ED1C24] roboto-serif-light mb-5 tracking-wide lg:text-3xl text-2xl text-center">
+        <h3 className="text-[#ED1C24] roboto-serif-light mb-5 tracking-wide lg:text-[36px] text-2xl text-center">
           Commitment in Action
         </h3>
       </div>
