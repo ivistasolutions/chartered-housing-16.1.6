@@ -12,7 +12,6 @@ const index = () => {
       <Banner
         backgroundImage="/chartered-interiors/banner.png"
         mobileBackgroundImage="/chartered-interiors/mobile-banner.png"
-        logo="/logo.png"
         logoWidth={70}
         logoHeight={70}
         showLogo={true}

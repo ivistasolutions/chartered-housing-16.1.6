@@ -9,7 +9,7 @@ const VisionaryLeadership = () => {
       <Banner
         backgroundImage="/visionary-leadership/banner.png"
         mobileBackgroundImage="/visionary-leadership/mobile-banner.png"
-        logo="/logo.png"
+        // logo="/logo.png"
         logoWidth={70}
         logoHeight={70}
         showLogo={true}
