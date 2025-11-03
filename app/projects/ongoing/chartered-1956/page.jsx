@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Chartered1956 from '../../../components/Chartered1956'
 import NextSeo from '@/app/components/Shared/Seo'

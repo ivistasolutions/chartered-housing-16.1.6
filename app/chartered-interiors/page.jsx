@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import CharteredInteriors from '../components/CharteredInteriors'
 import NextSeo from '../components/Shared/Seo'

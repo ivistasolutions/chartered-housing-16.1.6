@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import VisionaryLeadership from '../components/VisionaryLeadership'
 import NextSeo from '../components/Shared/Seo'

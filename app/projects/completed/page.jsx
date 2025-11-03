@@ -1,3 +1,4 @@
+'use client'
 import Completed from '@/app/components/Completed'
 import React from 'react'
 import NextSeo from '@/app/components/Shared/Seo'

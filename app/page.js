@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Home from "./components/Home";
 import NextSeo from "./components/Shared/Seo";

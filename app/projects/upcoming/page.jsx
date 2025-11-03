@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import UpcomingProjects from '@/app/components/UpcomingProjects'
 import NextSeo from '@/app/components/Shared/Seo'

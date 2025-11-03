@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ContactUs from '../components/ContactUs'
 import NextSeo from '../components/Shared/Seo'

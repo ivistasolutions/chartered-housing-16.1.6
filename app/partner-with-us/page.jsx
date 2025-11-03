@@ -1,3 +1,4 @@
+'use client'
 import PartnerWithUs from "@/app/components/PartnerWithUs"
 import NextSeo from '@/app/components/Shared/Seo'
 const page = () => {

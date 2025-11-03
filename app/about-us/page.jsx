@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import AboutUs from "../components/AboutUs";
 import NextSeo from "../components/Shared/Seo";

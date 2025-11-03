@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import WhyChartered from "../components/WhyChartered";
 import NextSeo from "../components/Shared/Seo";
@@ -13,6 +14,6 @@ const page = () => {
       <WhyChartered />
     </div>
   );
-};
+};  
 
 export default page;
