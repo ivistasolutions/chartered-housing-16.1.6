@@ -14,7 +14,7 @@ const index = () => {
         mobileBackgroundImage="/home/phone-banner.jpg" // 👈 fallback image for mobile
         title={false}
         subtitle={false}
-        textPosition="bottom-left"
+        // textPosition="bottom-left"
         overlayOpacity={0.2}
         showDivide={false}
         useVideo={true}

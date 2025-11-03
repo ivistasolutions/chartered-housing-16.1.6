@@ -118,7 +118,7 @@ const Header = () => {
         }`}>
           {/* Enquire Now Button */}
           <div className="hidden lg:block">
-            <Button href="/contact-us">Enquire Now</Button>
+            <Button alt="Enquire Now" href="/contact-us" className="cursor-pointer">Enquire Now</Button>
           </div>
 
           {/* Animated Hamburger Menu */}
@@ -133,7 +133,7 @@ const Header = () => {
               initial={false}
               animate={isMenuOpen ? "open" : "closed"}
               onClick={toggleMenu}
-              className="relative h-16 w-12 rounded-full bg-transparent transition-colors ml-auto"
+              className="relative h-16 w-12 rounded-full bg-transparent transition-colors ml-auto cursor-pointer"
             >
               <motion.span
                 variants={VARIANTS.top}

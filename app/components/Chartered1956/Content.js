@@ -15,7 +15,7 @@ const Content = () => {
               tribute to timelessness, elegance, and architectural integrity.
               This is not just another development; it’s our latest masterpiece,
               a rare blend of luxury and spaciousness we proudly call{" "}
-              <b>Luxcious.</b>
+              <b className="text-[#ED1C24]">Luxcious.</b>
             </h6>
             <h6 className="text-center lg:text-[30px] text-[20px] text-[#646464] lg:text-left">
               We’re a people-first company where dedication, craftsmanship, and
@@ -41,7 +41,7 @@ const Content = () => {
             </h6>
             <h6 className="text-center lg:text-[30px] text-[20px] text-[#646464] lg:text-left">
               As luck would have it, even the pin code is 560001 - ending with
-              #1 which adds a touch of distinction to <b>Luxcious</b> living.
+              #1 which adds a touch of distinction to <b className="text-[#ED1C24]">Luxcious</b> living.
             </h6>
           </div>
         </div>

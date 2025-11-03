@@ -11,8 +11,8 @@ const CsrActivities = () => {
         backgroundImage="/csr/banner.png"
         mobileBackgroundImage="/csr/mobile-banner.png"
         sectionTitle="Corporate Social Responsibility"
-        title="Building Better Lives"
-        // subtitle="CSR Activities"
+        // title=""
+        subtitle="Building Better Lives"
       />
       <BreadCrumbs title="CSR Activities" />   
       <Content />

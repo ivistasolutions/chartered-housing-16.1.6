@@ -8,7 +8,7 @@ const Footer = () => {
       {/* Contact Information Section */}
       <div className='container mx-auto lg:px-0 px-5 py-8'>
         <div className='flex lg:flex-row flex-col lg:items-center gap-4 lg:text-4xl text-xl font-medium'>
-          <span  className='border-b lg:border-b-0 lg:pb-0 pb-5'>Reach Us: <a href="tel:+918031021400" className='text-white'>+91 803 102 1400</a></span>
+          <span  className='border-b lg:border-b-0 lg:pb-0 pb-5'>Reach Us: <a href="tel:08031021400" className='text-white'>080-31021400</a></span>
           <div className='w-px h-6 bg-white lg:block hidden'></div>
           <span>Email: <a href="mailto:sales@charteredhousing.com" className='text-white'>sales@charteredhousing.com</a></span>
         </div>
@@ -16,7 +16,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className='container mx-auto lg:px-0 px-5 lg:py-12 pb-10'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl'>
           {/* Our Projects Column */}
           <div>
             <h3 className='text-lg font-semibold uppercase border-b border-white pb-2 mb-4'>
@@ -51,7 +51,7 @@ const Footer = () => {
               Corporate Address
             </h3>
             <div className='mb-4'>
-              <span>Chartered Housing (P) Ltd.,</span>
+              <span>Chartered Housing (P) Ltd.,</span> <br />
               <span>27, Victoria Road, Bangalore - 560047</span>
             </div>
             
