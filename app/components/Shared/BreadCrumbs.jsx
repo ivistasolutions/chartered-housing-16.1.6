@@ -8,10 +8,10 @@ const BreadCrumbs = ({ title }) => {
       <div className="container mx-auto pt-10">
         <div className="flex items-center gap-2">
           <Link href="/">
-            <span className="text-sm text-gray-500">Home</span>
+            <span className="text-sm text-[#646464]">Home</span>
           </Link>
-          <span className="text-sm text-gray-500">/</span>
-          <span className="text-sm text-gray-500">{title}</span>
+          <span className="text-sm text-[#646464]">/</span>
+          <span className="text-sm text-[#646464]">{title}</span>
         </div>
       </div>
       </div>
