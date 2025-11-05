@@ -1,9 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import { X } from "lucide-react";
 import Button from "../Shared/Button";
-import Link from "next/link";
+import { useFormHandler } from "@/hooks/useFormHandler";
+import {
+  CheckboxField,
+  PhoneInputField,
+  TextInputField,
+} from "../Form/FormField";
 
 const images = [
   "/chartered-birdsong/img3.png",
@@ -14,6 +20,52 @@ const images = [
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [downloadAllowed, setDownloadAllowed] = useState(false);
+
+  const {
+    formData,
+    handleChange,
+    handleSelectChange,
+    handleSubmit,
+    isSubmitting,
+    submitStatus,
+    fieldErrors,
+  } = useFormHandler(5862);
+
+  const handleDownloadClick = (e) => {
+    e.preventDefault();
+    if (downloadAllowed) {
+      // If already allowed, download directly
+      window.open(
+        "/chartered-birdsong/Chartered_Birdsong_Project_Brochure.pdf",
+        "_blank"
+      );
+    } else {
+      // Show modal to collect information
+      setShowModal(true);
+    }
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    await handleSubmit(e);
+  };
+
+  // Handle download after successful submission
+  useEffect(() => {
+    if (submitStatus === "success" && showModal) {
+      setDownloadAllowed(true);
+      setShowModal(false);
+      // Trigger download
+      setTimeout(() => {
+        window.open(
+          "/chartered-birdsong/Chartered_Birdsong_Project_Brochure.pdf",
+          "_blank"
+        );
+      }, 500);
+    }
+  }, [submitStatus, showModal]);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -107,14 +159,115 @@ const Carousel = () => {
           ))}
         </div>
       </div>
-      <div className="pt-28">
-        <Link target="_blank" href="/chartered-birdsong/Chartered_Birdsong_Project_Brochure.pdf" className="">
-        <Button>
-        Download Brochure
-        </Button></Link>
+      <div className="lg:pt-28 pt-5">
+        <Button onClick={handleDownloadClick}>Download Brochure</Button>
       </div>
+
+      {/* Download Gate Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg max-w-xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+              <h3 className="text-2xl font-semibold text-[#646464]">
+                Download Brochure
+              </h3>
+              <button
+                onClick={() => setShowModal(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <form onSubmit={handleFormSubmit} className="px-6 py-6">
+              <div className="space-y-6">
+                {/* Name */}
+                {/* <div>
+                  <TextInputField
+                    placeholder="Your Name *"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  {fieldErrors.name && (
+                    <span className="text-red-500 text-xs text-start mt-1 block">
+                      {fieldErrors.name}
+                    </span>
+                  )}
+                </div> */}
+
+                {/* Mobile */}
+                <div>
+                  <PhoneInputField
+                    value={formData.mobile}
+                    onChange={(val) => handleSelectChange("mobile", val)}
+                  />
+                  {fieldErrors.mobile && (
+                    <span className="text-red-500 text-xs text-start mt-1 block">
+                      {fieldErrors.mobile}
+                    </span>
+                  )}
+                </div>
+
+                {/* Email */}
+                <div>
+                  <TextInputField
+                    type="email"
+                    placeholder="Email Address *"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {fieldErrors.email && (
+                    <span className="text-red-500 text-xs text-start mt-1 block">
+                      {fieldErrors.email}
+                    </span>
+                  )}
+                </div>
+
+                {/* Consent Checkbox */}
+                {/* <div>
+                  <CheckboxField
+                    id="download-consent"
+                    checked={formData.consent}
+                    onChange={handleSelectChange}
+                  />
+                  {fieldErrors.consent && (
+                    <span className="text-red-500 text-xs text-start mt-1 block">
+                      {fieldErrors.consent}
+                    </span>
+                  )}
+                </div> */}
+
+                {/* Submit Status Messages */}
+                {submitStatus === "success" && (
+                  <div className="text-green-600 text-sm">
+                    Thank you! Your download will start shortly.
+                  </div>
+                )}
+                {submitStatus === "error" && (
+                  <div className="text-red-600 text-sm">
+                    Something went wrong. Please try again.
+                  </div>
+                )}
+
+                {/* Submit Button */}
+                <div className="flex gap-4 pt-4 justify-center items-center">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="relative cursor-pointer bg-[#ED1C25] z-0 flex items-center gap-2 overflow-hidden border-2 border-[#FAD4D680] px-4 py-2 font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-[#fff] before:transition-transform before:duration-1000 before:content-[''] hover:scale-105 hover:text-[#ED1C25] hover:before:translate-x-[0%] hover:before:translate-y-[0%] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Submitting..." : "Download Now"}
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default Carousel;

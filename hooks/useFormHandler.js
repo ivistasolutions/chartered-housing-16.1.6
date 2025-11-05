@@ -111,10 +111,18 @@ export const useFormHandler = (formId) => {
     let error = null;
     switch (name) {
       case "name":
-        if (!value || !value.trim()) {
-          error = "Name is required";
-        } else if (value.trim().length < 2) {
-          error = "Name must be at least 2 characters";
+        if (formId === 5862) {
+          // Name is optional for form 5862, but if provided, must be valid
+          if (value && value.trim() && value.trim().length < 2) {
+            error = "Name must be at least 2 characters";
+          }
+        } else {
+          // Name is required for other forms
+          if (!value || !value.trim()) {
+            error = "Name is required";
+          } else if (value.trim().length < 2) {
+            error = "Name must be at least 2 characters";
+          }
         }
         break;
       case "email":
@@ -144,7 +152,7 @@ export const useFormHandler = (formId) => {
           formId !== 5858 &&
           formId !== 5859 &&
           formId !== 5850 &&
-
+          formId !== 5862 &&
           (!value || !value.trim())
         ) {
           // Different error messages based on form type
@@ -218,7 +226,7 @@ export const useFormHandler = (formId) => {
       cleanMobile = cleanMobile.slice(0, 10);
 
       const cf7Data = new FormData();
-      cf7Data.append("name", formData.name);
+      cf7Data.append("name", formData.name || (formId === 5862 ? "" : "Not provided"));
       cf7Data.append("email", formData.email);
       cf7Data.append("mobile", cleanMobile);
       cf7Data.append("purpose", formData.purpose);

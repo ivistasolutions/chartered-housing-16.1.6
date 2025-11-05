@@ -90,7 +90,7 @@ const ProjectDetails = () => {
               <div className="flex justify-center pb-5 lg:pt-0 pt-5">
               <Image src={item.icon} alt={item.title} width={50} height={50} />
               </div>
-              <h3 className="text-[#ED1C25] font-bold mb-3 lg:text-2xl text-2xl">
+              <h3 className="text-[#ED1C25] font-light text-lg">
                 {item.title}
               </h3>
               <h5 className="lg:text-lg text-lg font-medium text-[#646464] lg:pt-5 text-center">
