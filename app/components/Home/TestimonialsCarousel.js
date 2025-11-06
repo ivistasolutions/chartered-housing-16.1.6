@@ -79,7 +79,7 @@ export default function TestimonialsCarousel() {
             className="items-center gap-6 mt-10 hidden lg:flex
         "
           >
-            <button onClick={prevSlide} className="p-2">
+            <button onClick={prevSlide} className="p-2" aria-label="Previous testimonials">
               <ArrowLeft className="w-6 h-6" />
             </button>
 
@@ -98,7 +98,7 @@ export default function TestimonialsCarousel() {
               )}
             </div>
 
-            <button onClick={nextSlide} className="p-2">
+            <button onClick={nextSlide} className="p-2" aria-label="Next testimonials">
               <ArrowRight className="w-6 h-6" />
             </button>
           </div>
@@ -188,7 +188,7 @@ export default function TestimonialsCarousel() {
       </section>
       {/* Navigation + Progress - Mobile Only */}
       <div className="flex items-center gap-6 mt-10 lg:hidden justify-center">
-        <button onClick={prevSlideMobile} className="p-2">
+        <button onClick={prevSlideMobile} className="p-2" aria-label="Previous testimonial">
           <ArrowLeft className="w-6 h-6" />
         </button>
 
@@ -203,7 +203,7 @@ export default function TestimonialsCarousel() {
           ))}
         </div>
 
-        <button onClick={nextSlideMobile} className="p-2">
+        <button onClick={nextSlideMobile} className="p-2" aria-label="Next testimonial">
           <ArrowRight className="w-6 h-6" />
         </button>
       </div>

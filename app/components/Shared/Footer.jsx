@@ -57,19 +57,39 @@ const Footer = () => {
             
             {/* Social Media Icons */}
             <div className='flex gap-4'>
-              <a target='_blank' href="https://www.instagram.com/charteredhousing?igsh=ZzJkamVuaDZjazE0" className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
+              <a 
+                target='_blank' 
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/charteredhousing?igsh=ZzJkamVuaDZjazE0" 
+                aria-label="Visit Chartered Housing on Instagram"
+                className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
                 {/* Instagram Icon */}
                 <FaInstagram size={25}/>
               </a>
-              <a target='_blank' href="https://www.facebook.com/CharteredHousing/" className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
-                {/* LinkedIn Icon */}
+              <a 
+                target='_blank' 
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/CharteredHousing/" 
+                aria-label="Visit Chartered Housing on Facebook"
+                className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
+                {/* Facebook Icon */}
                 <FaFacebookF size={25}/>
               </a>
-              <a target='_blank' href="https://in.linkedin.com/company/chartered-housing-private-limited" className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
+              <a 
+                target='_blank' 
+                rel="noopener noreferrer"
+                href="https://in.linkedin.com/company/chartered-housing-private-limited" 
+                aria-label="Visit Chartered Housing on LinkedIn"
+                className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
                 {/* LinkedIn Icon */}
                 <FaLinkedinIn size={25}/>
               </a>
-              <a target='_blank' href="https://www.youtube.com/@charteredhousing25" className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
+              <a 
+                target='_blank' 
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/@charteredhousing25" 
+                aria-label="Visit Chartered Housing on YouTube"
+                className='w-10 h-10 bg-[#646464] rounded-full p-2 flex items-center justify-center hover:bg-gray-700 transition-colors'>
                 {/* Youtube Icon */}
                 <FaYoutube size={25}/>
               </a>

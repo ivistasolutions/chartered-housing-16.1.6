@@ -134,6 +134,7 @@ const Header = () => {
               initial={false}
               animate={isMenuOpen ? "open" : "closed"}
               onClick={toggleMenu}
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               className="relative h-16 w-12 rounded-full bg-transparent transition-colors ml-auto cursor-pointer"
             >
               <motion.span
