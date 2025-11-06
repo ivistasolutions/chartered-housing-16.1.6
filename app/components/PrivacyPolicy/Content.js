@@ -12,9 +12,9 @@ const Content = () => {
               users of the website.
             </p>
 
-            <h3 className="roboto-serif-medium text-2xl text-[#646464]">
+            <h1 className="roboto-serif-medium text-2xl text-[#646464]">
               Personal identification information:
-            </h3>
+            </h1>
             <p className="text-lg text-[#646464] text-left">
               We may collect personal identification information from Users in a
               variety of ways, including, when the Users visit our website, fill
@@ -24,9 +24,9 @@ const Content = () => {
               supply personal identification information, except that it may
               prevent them from engaging in certain website related activities.
             </p>
-            <h3 className="roboto-serif-medium text-2xl text-[#646464]">
+            <h2 className="roboto-serif-medium text-2xl text-[#646464]">
               Non-personal identification information:
-            </h3>
+            </h2>
             <p className="text-lg text-[#646464] text-left">
               We may collect non-personal identification information about Users
               whenever they interact with our website. Non-personal

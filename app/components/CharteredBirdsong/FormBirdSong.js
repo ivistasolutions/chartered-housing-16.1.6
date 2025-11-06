@@ -123,14 +123,7 @@ const FormBirdSong = () => {
               </div>
               <h6 className="text-[#646464] lg:text-lg text-center">
                 By continuing, you agree to our{" "}
-                <Link
-                  target="_blank"
-                  href="/terms-and-conditions"
-                  className="underline underline-offset-2"
-                >
-                  T&Cs
-                </Link>{" "}
-                and{" "}
+                
                 <Link
                   target="_blank"
                   href="/privacy-policy"

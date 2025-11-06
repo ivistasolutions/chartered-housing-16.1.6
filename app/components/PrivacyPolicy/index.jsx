@@ -1,7 +1,6 @@
 import React from "react";
 import Content from "./Content";
 import BreadCrumbs from "../Shared/BreadCrumbs";
-import Banner from "../Shared/Banner";
 
 const index = () => {
   return (
