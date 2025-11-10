@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Banner = ({
   backgroundImage = null,
@@ -25,17 +25,93 @@ const Banner = ({
   logoClassName = "",
 }) => {
   const [videoFailed, setVideoFailed] = useState(false);
-  const [isIOS, setIsIOS] = useState(false);
+  const desktopVideoRef = useRef(null);
+  const mobileVideoRef = useRef(null);
+  const [isAppleDevice, setIsAppleDevice] = useState(false);
 
   useEffect(() => {
     const ua = window.navigator.userAgent;
     if (
-      /iPad|iPhone|iPod/.test(ua) ||
+      /iPad|iPhone|iPod|Mac/i.test(ua) ||
       (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
     ) {
-      setIsIOS(true);
+      setIsAppleDevice(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!useVideo) {
+      setVideoFailed(false);
+      return;
+    }
+
+    const videos = [desktopVideoRef.current, mobileVideoRef.current].filter(
+      Boolean
+    );
+
+    if (!videos.length) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    const markVideoPlayable = () => {
+      if (!cancelled) {
+        setVideoFailed(false);
+      }
+    };
+
+    const markVideoFailed = () => {
+      if (!cancelled) {
+        setVideoFailed(true);
+      }
+    };
+
+    const tryPlay = (video) => {
+      if (!video) return;
+      video.addEventListener("play", markVideoPlayable);
+      video.addEventListener("error", markVideoFailed);
+
+      try {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.then === "function") {
+          playPromise.then(markVideoPlayable).catch(markVideoFailed);
+        } else if (video.paused) {
+          markVideoFailed();
+        }
+      } catch (error) {
+        markVideoFailed();
+      }
+    };
+
+    videos.forEach(tryPlay);
+
+    const autoplayFallbackTimeout = window.setTimeout(() => {
+      const anyPlaying = videos.some(
+        (video) => video && !video.paused && !video.ended
+      );
+
+      if (!anyPlaying) {
+        markVideoFailed();
+      }
+    }, 1500);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(autoplayFallbackTimeout);
+      videos.forEach((video) => {
+        if (!video) return;
+        video.removeEventListener("play", markVideoPlayable);
+        video.removeEventListener("error", markVideoFailed);
+      });
+    };
+  }, [
+    useVideo,
+    backgroundVideo,
+    backgroundVideoSafari,
+    mobileBackgroundVideo,
+    mobileBackgroundVideoSafari,
+  ]);
   // Position classes based on textPosition prop
   const getTextPositionClasses = () => {
     switch (textPosition) {
@@ -50,20 +126,30 @@ const Banner = ({
         return "absolute lg:bottom-40 bottom-25 lg:left-20 left-0";
     }
   };
-  const shouldUseImageFallback = videoFailed && isIOS;
+  const shouldRenderVideo = useVideo && !videoFailed;
+  const isVideoFallbackActive = useVideo && videoFailed && isAppleDevice;
+  const fallbackMobileHeightClass = isVideoFallbackActive
+    ? "h-[100vh]"
+    : "h-[90vh]";
   return (
     <div className="relative overflow-hidden h-screen w-full">
       {/* Background Image/Video */}
       {/* Background */}
-      {useVideo && !shouldUseImageFallback ? (
+      {shouldRenderVideo ? (
         <>
           <video
+            ref={desktopVideoRef}
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted
             loop
             playsInline
-            // onError={() => setVideoFailed(true)}
+            onError={() => setVideoFailed(true)}
+            onPause={() => {
+              if (isAppleDevice) {
+                setVideoFailed(true);
+              }
+            }}
           >
             <source src={backgroundVideoSafari} type="video/mp4" />
             <source src={backgroundVideo} type="video/webm" />
@@ -71,12 +157,18 @@ const Banner = ({
 
           {mobileBackgroundVideo && (
             <video
+              ref={mobileVideoRef}
               className="absolute inset-0 w-full h-full object-cover lg:hidden"
               autoPlay
               muted
               loop
               playsInline
-              // onError={() => setVideoFailed(true)}
+              onError={() => setVideoFailed(true)}
+              onPause={() => {
+                if (isAppleDevice) {
+                  setVideoFailed(true);
+                }
+              }}
             >
               <source src={mobileBackgroundVideoSafari} type="video/mp4" />
               <source src={mobileBackgroundVideo} type="video/webm" />
@@ -101,7 +193,7 @@ const Banner = ({
           {mobileBackgroundImage && (
             <div
               className={`absolute inset-0 ${
-                shouldUseImageFallback ? "h-[100vh]" : "h-[90vh]"
+                fallbackMobileHeightClass
               } bg-no-repeat bg-cover lg:hidden`}
               style={{
                 backgroundImage: `url(${mobileBackgroundImage})`,
