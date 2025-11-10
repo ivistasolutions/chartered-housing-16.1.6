@@ -403,6 +403,7 @@ const Banner = ({
 }) => {
   const [videoFailed, setVideoFailed] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
+  const [isLowPowerMode, setIsLowPowerMode] = useState(false);
 
   useEffect(() => {
     const ua = window.navigator.userAgent;
@@ -413,6 +414,46 @@ const Banner = ({
       setIsIOS(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isIOS) {
+      setIsLowPowerMode(false);
+      return;
+    }
+
+    const connection =
+      navigator.connection ||
+      navigator.mozConnection ||
+      navigator.webkitConnection;
+    const reducedMotionQuery =
+      typeof window !== "undefined" && window.matchMedia
+        ? window.matchMedia("(prefers-reduced-motion: reduce)")
+        : null;
+
+    const updateLowPowerMode = () => {
+      const saveDataEnabled = Boolean(connection?.saveData);
+      const prefersReducedMotion = Boolean(reducedMotionQuery?.matches);
+      setIsLowPowerMode(saveDataEnabled || prefersReducedMotion);
+    };
+
+    updateLowPowerMode();
+
+    connection?.addEventListener?.("change", updateLowPowerMode);
+    if (reducedMotionQuery?.addEventListener) {
+      reducedMotionQuery.addEventListener("change", updateLowPowerMode);
+    } else if (reducedMotionQuery?.addListener) {
+      reducedMotionQuery.addListener(updateLowPowerMode);
+    }
+
+    return () => {
+      connection?.removeEventListener?.("change", updateLowPowerMode);
+      if (reducedMotionQuery?.removeEventListener) {
+        reducedMotionQuery.removeEventListener("change", updateLowPowerMode);
+      } else if (reducedMotionQuery?.removeListener) {
+        reducedMotionQuery.removeListener(updateLowPowerMode);
+      }
+    };
+  }, [isIOS]);
   // Position classes based on textPosition prop
   const getTextPositionClasses = () => {
     switch (textPosition) {
@@ -427,7 +468,7 @@ const Banner = ({
         return "absolute lg:bottom-40 bottom-25 lg:left-20 left-0";
     }
   };
-  const shouldUseImageFallback = videoFailed || isIOS;
+  const shouldUseImageFallback = videoFailed || (isIOS && isLowPowerMode);
   return (
     <div className="relative overflow-hidden h-screen w-full">
       {/* Background Image/Video */}
