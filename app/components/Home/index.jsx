@@ -19,9 +19,9 @@ const index = () => {
         showDivide={false}
         useVideo={true}
         backgroundVideo="/videos/Chattered-Banner.webm"
-        backgroundVideoSafari="/videos/Chattered-Banner.webm"
+        backgroundVideoSafari="/videos/Chattered-Banner.mp4"
         mobileBackgroundVideo="/videos/mobile-video.webm"
-        // mobileBackgroundVideoSafari="/videos/phone-banner.mp4"
+        mobileBackgroundVideoSafari="/videos/phone-banner-02.mp4"
       />
       </div>
       <Content />
