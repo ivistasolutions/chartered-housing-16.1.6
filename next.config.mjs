@@ -131,6 +131,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blogs/to-live-in-the-city-or-away-from-it',
+        destination: '/blogs',
+        permanent: true,
+      },
+      {
         source: '/blogs/real-estate-investments-an-exceptional-way-to-maximise-profits',
         destination: '/blogs',
         permanent: true,
