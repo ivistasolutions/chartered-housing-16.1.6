@@ -8,6 +8,7 @@ const sectionData = {
     {
       title: "Nalkemar School",
       mainTitle: "Our Recent Initiative",
+      alt: "Chartered Housing CSR Activities | Aerya Alva Foundation | Nalkemar School ",
       description:
         "In 2023 Through the Aerya Alva Foundation, we adopted Nalkemar School in Dakshin Kannada.",
       image: "/csr/school.webp",
@@ -25,6 +26,7 @@ const sectionData = {
     {
       title: "Environmental Stewardship",
       mainTitle: "Our Past Initiatives",
+      alt: "Chartered Housing CSR Activities | Environmental Stewardship | Tree transplantation | Chartered Coronet, 2006",
       description: "We don't just build on land - we honour it.",
       image: "/csr/evs.webp",
       points: [
@@ -48,6 +50,7 @@ const sectionData = {
     },
     {
       title: "Worker Welfare",
+      alt: "Chartered Housing CSR Activities | Worker Welfare",
       description: "We care deeply about the people who build our homes.",
       image: "/csr/worker.webp",
       points: [
@@ -65,6 +68,7 @@ const sectionData = {
     },
     {
       title: "Rural Outreach",
+      alt: "Chartered Housing CSR Activities | Rural Outreach | Health & accident insurance, Weekly rural health camps  for 500+ farm workers",
       description: "We believe development must reach the grassroots.",
       image: "/csr/rural.webp",
       points: [
@@ -79,6 +83,7 @@ const sectionData = {
     },
     {
       title: "Education & Youth Empowerment",
+      alt: "Chartered Housing CSR Activities | Education & Youth Empowerment | Creche Support, Nutrition & Hygiene, Environment & Arts Education for labourers’ children",
       description: "Creating safe, stimulating spaces for the next generation.",
       image: "/csr/education.webp",
       points: [
@@ -115,7 +120,7 @@ export default function RecentInitiatives() {
             <div className="lg:w-[35%]">
               <Image
                 src={initiative.image}
-                alt={initiative.title}
+                alt={initiative.alt}
                 width={600}
                 height={600}
                 className="w-full h-full object-cover"

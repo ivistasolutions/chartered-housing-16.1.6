@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
-
+import Image from "next/image";
 const images = [
     "/chartered-1956/img1.webp",
     "/chartered-1956/img2.webp",
@@ -54,7 +54,7 @@ const Carousel = () => {
                         <motion.img
                             key={currentIndex}
                             src={images[currentIndex]}
-                            alt={`carousel-${currentIndex}`}
+                            alt={`Chartered Housing | Chartered 1956 | Premium 4bhk boutique residences on Palace Road, Bengaluru | ${currentIndex}`}
                             className="w-full h-[300px]  md:h-[500px] object-cover"
                             initial={{ opacity: 0.5, scale: 0.98 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -95,10 +95,12 @@ const Carousel = () => {
                             onClick={() => setCurrentIndex(thumbnail.index)}
                             className="w-24 sm:w-32 md:w-60 h-16 sm:h-24 md:h-40 flex-shrink-0 cursor-pointer border-2 border-transparent hover:border-blue-400 transition"
                         >
-                            <img
+                            <Image
                                 src={thumbnail.src}
-                                alt={`thumb-${thumbnail.index}`}
+                                alt={`Chartered Housing | Chartered 1956 | Premium 4bhk boutique residences on Palace Road, Bengaluru | ${thumbnail.index}`}
                                 className="w-full h-full object-cover"
+                                width={1000}
+                                height={1000}
                             />
                         </div>
                     ))}

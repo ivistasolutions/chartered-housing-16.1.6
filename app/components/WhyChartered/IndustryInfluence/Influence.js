@@ -8,7 +8,7 @@ const Influence = () => {
           <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-start justify-center border-b border-[#ED1C25] lg:space-y-10 pb-5 lg:pb-0">
             <Image
               src="/why-chartered/abh.webp"
-              alt="Aerya Balakrishna Hegde"
+              alt="Mr. Aerya Balakrishna Hegde | Founder & Chairman | Chartered Housing"
               width={1000}
               height={1000}
               className="lg:w-[400px] lg:h-[400px] lg:px-0 px-5"
@@ -61,7 +61,7 @@ const Influence = () => {
           <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center justify-center">
             <Image
               src="/why-chartered/bimal.webp"
-              alt="Aerya Balakrishna Hegde"
+              alt="Mr. A. Bimal Hegde | President-Elect of CREDAI Bengaluru"
               width={1000}
               height={1000}
               className="lg:w-[400px] lg:h-[400px] lg:px-0 px-5"

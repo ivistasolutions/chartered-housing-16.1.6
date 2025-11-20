@@ -65,7 +65,7 @@ export default function LeadershipSection() {
             <div className="flex justify-center lg:justify-end">
               <Image
                 src="/about-us/abh01.webp"
-                alt="Mr. A. Balakrishna Hegde"
+                alt="Mr. A. Balakrishna Hegde | Founder & Chairman | Chartered Housing"
                 width={800}
                 height={600}
                 className="object-contain z-10 lg:mt-40"

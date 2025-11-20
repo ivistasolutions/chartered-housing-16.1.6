@@ -22,7 +22,7 @@ const TeamTabs = () => {
             >
               <Image
                 src={member.thumb}
-                alt={member.name}
+                alt={member.alt}
                 width={150}
                 height={150}
                 className="object-cover"

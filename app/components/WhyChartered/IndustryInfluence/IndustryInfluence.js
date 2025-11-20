@@ -15,9 +15,11 @@ const IndustryInfluence = () => {
           <div className="w-32 border-b-2 border-[#ED1C24] my-4"></div>
         </div>
         <div className="flex justify-start">
-          <img
+          <Image
             src="/why-chartered/credai.svg"
-            alt="Industry Influence"
+            alt="CREDAI Logo"
+            width={1000}
+            height={1000}
             className="w-[70%]"
           />
         </div>

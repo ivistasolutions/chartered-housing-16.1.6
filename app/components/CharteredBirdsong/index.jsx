@@ -17,6 +17,7 @@ const CharteredBirdsong = () => {
         mobileBackgroundImage="/chartered-birdsong/mobile-banner.webp"
         // sectionTitle="Chartered Birdsong"
         showDivide={false}
+        alt="Chartered Birdsong | Premium Residential Plots at Sadenahalli on Yelahanka–Doddaballapur Highway, Bengaluru"
         logo="/chartered-birdsong/logo.svg"
         logoClassName="mb-3 w-60 h-auto lg:w-96 lg:h-auto"
         title="Space to dream. Freedom to build."

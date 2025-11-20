@@ -17,6 +17,7 @@ const Chartered1956 = () => {
         mobileBackgroundImage="/chartered-1956/mobile-banner.webp"
         logo="/chartered-1956/1956-logo-white.svg"
         logoWidth={500}
+        alt="Chartered Housing | Chartered 1956 | Premium 4bhk boutique residences on Palace Road, Bengaluru"
         // sectionTitle="CHARTERED 1956"
         showDivide={false}
         logoClassName="mb-3 w-32 h-auto lg:w-52 lg:h-auto"

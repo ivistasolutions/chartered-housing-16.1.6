@@ -7,6 +7,7 @@ const Grid = () => {
     {
       id: 1,
       title: "Palace Road",
+      alt: "Chartered Housing | Chartered 1956 | Premium 4bhk boutique residences on Palace Road, Bengaluru",
       reraNumber: "PRM/KA/RERA/1251/446/PR/060924/007005",
       desktopImage: "/ongoing-project/palace.webp",
       mobileImage: "/ongoing-project/palace.webp",
@@ -25,6 +26,7 @@ const Grid = () => {
     {
       id: 2,
       title: "Yelahanka–Doddaballapur Road",
+      alt: "Chartered Housing | Chartered Birdsong | Premium Residential Plots at Sadenahalli on Yelahanka–Doddaballapur Highway, Bengaluru",
       reraNumber: "PRM/KA/RERA/1251/472/PR/210325/007605",
       desktopImage: "/ongoing-project/yelahanka.webp",
       mobileImage: "/ongoing-project/yelahanka.webp",
@@ -55,7 +57,7 @@ const Grid = () => {
               <div className="lg:w-1/2 flex flex-col-reverse lg:flex-col gap-5">
                 <Image
                   src={project.desktopImage}
-                  alt={project.title}
+                  alt={project.alt}
                   width={1200}
                   height={1000}
                   className="w-full h-full object-cover object-center hidden lg:block"
@@ -84,7 +86,7 @@ const Grid = () => {
                 </div>
                 <Image
                   src={project.mobileImage}
-                  alt={project.title}
+                  alt={project.alt}
                   width={1200}
                   height={1000}
                   className="w-full h-full object-cover object-center block lg:hidden pt-5"

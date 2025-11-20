@@ -15,6 +15,7 @@ const UpcomingProjects = () => {
         subtitle="One Landmark at a Time"
         textPosition="bottom-left"
         overlayOpacity={0.2}
+        alt="Chartered Housing | Chartered Hummingbird | Apartments on Kanakapura Road, Bengaluru"
       />
       <BreadCrumbs title="Upcoming Projects" />
       <Content />

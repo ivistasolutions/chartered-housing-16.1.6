@@ -2,6 +2,7 @@ export const team = [
     {
       id: 1,
       name: "Mr. A. Balakrishna Hegde",
+      alt: "Mr. A. Balakrishna Hegde | Founder & Chairman | Chartered Housing",
       role: "Founder & Chairman",
       thumb: "/visionary-leadership/team/abh-1.webp",
       img: "/visionary-leadership/team/abh-right-2.webp",
@@ -17,6 +18,7 @@ export const team = [
     {
       id: 2,
       name: "Mr. A. Bimal Hegde",
+      alt: "Mr. A. Bimal Hegde | Managing Director | Chartered Housing",
       role: "Managing Director",
       thumb: "/visionary-leadership/team/bimal-1.webp",
       img: "/visionary-leadership/team/bimal-right-2.webp",
@@ -26,6 +28,7 @@ export const team = [
     {
       id: 3,
       name: "Ms. Bhakti Hegde",
+      alt: "Ms. Bhakti Hegde | Executive Director | Chartered Housing",
       role: "Executive Director",
       thumb: "/visionary-leadership/team/bhakti-1.webp",
       img: "/visionary-leadership/team/bhakti-right-2.webp",

@@ -15,7 +15,7 @@ const ProjectsSection = () => {
     {
       id: 1,
       image: "/home/ongoing.webp",
-      alt: "Birdsong",
+      alt: "Chartered Housing | Chartered Birdsong | Premium Residential Plots at Sadenahalli on Yelahanka–Doddaballapur Highway, Bengaluru",
       // logo: "/ongoing-project/bird-song.svg",
       logoAlt: "Birdsong Logo",
       ProjectTitle: "Chartered Birdsong",
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
     {
       id: 2,
       image: "/home/legacy.webp",
-      alt: "Palace Road",
+      alt: "Chartered Housing | Chartered 1956 | Premium 4bhk boutique residences on Palace Road, Bengaluru",
       // logo: "/ongoing-project/chartered-1956.svg",
       logoAlt: "Chartered 1956 Logo",
       ProjectTitle: "Chartered 1956",

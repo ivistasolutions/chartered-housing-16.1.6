@@ -14,6 +14,7 @@ const Commercial = () => {
         sectionTitle="Commercial Projects"
         title="The Crossroads of"
         subtitle="Access and Opportunity"
+        alt="Chartered Housing | Chartered Centre | Commercial Office Space, Gajendra Nagar, Neelasandra,  near Adugodi on Hosur Road, Bengaluru"
       />
       <BreadCrumbs title="Commercial Projects" />
       <Content />
