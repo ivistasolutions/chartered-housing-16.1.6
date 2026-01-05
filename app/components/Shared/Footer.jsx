@@ -103,7 +103,7 @@ const Footer = () => {
         <div className='container mx-auto px-4 py-4'>
           <div className='flex flex-col-reverse sm:flex-row justify-between items-center gap-4'>
             <div className='text-sm'>
-              © 2025 Chartered Housing. All rights reserved.
+              © {new Date().getFullYear()} Chartered Housing. All rights reserved.
             </div>
             <div className='flex items-center gap-4 text-sm'>
               <a href="/disclaimer" className='hover:text-gray-200 transition-colors'>Disclaimer</a>
