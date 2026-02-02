@@ -4,6 +4,7 @@ import Header from "./components/Shared/Header";
 import Footer from "./components/Shared/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
 import LazyAnalytics from "./components/Shared/LazyAnalytics";
+import ClarityInit from "./components/Clarity";
 
 // Optimize Nunito font with Next.js font optimization
 const nunito = localFont({
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <ClarityInit />
         <ScrollToTop />
         {/* Lazy load analytics scripts after user interaction */}
         <LazyAnalytics />
