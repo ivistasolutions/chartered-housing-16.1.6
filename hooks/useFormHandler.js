@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { validatePlainTextOnly, sanitizeText } from "@/lib/sanitizeText";
 
 // Default form data
 const defaultFormData = {
@@ -36,7 +37,7 @@ const validateMobileNumber = (mobile) => {
   }
 
   const length = cleanMobile.length;
-  
+
   // Must be exactly 10 digits
   if (length !== 10) {
     return "Mobile number must be exactly 10 digits";
@@ -110,14 +111,17 @@ export const useFormHandler = (formId) => {
   const validateField = (name, value) => {
     let error = null;
     switch (name) {
-      case "name":
+      case "name": {
+        const nameSafe = validatePlainTextOnly(value);
+        if (nameSafe) {
+          error = nameSafe;
+          break;
+        }
         if (formId === 5862) {
-          // Name is optional for form 5862, but if provided, must be valid
           if (value && value.trim() && value.trim().length < 2) {
             error = "Name must be at least 2 characters";
           }
         } else {
-          // Name is required for other forms
           if (!value || !value.trim()) {
             error = "Name is required";
           } else if (value.trim().length < 2) {
@@ -125,6 +129,7 @@ export const useFormHandler = (formId) => {
           }
         }
         break;
+      }
       case "email":
         if (!value || !value.trim()) {
           error = "Email is required";
@@ -169,11 +174,17 @@ export const useFormHandler = (formId) => {
           error = "Company name is required";
         }
         break;
-      case "message":
+      case "message": {
+        const messageSafe = validatePlainTextOnly(value);
+        if (messageSafe) {
+          error = messageSafe;
+          break;
+        }
         if (value && value.trim() && value.trim().length < 10) {
           error = "Message must be at least 10 characters";
         }
         break;
+      }
       case "consent":
         if ((formId === 1067 || formId === 5858 || formId === 5859) && !value) {
           error = "You must agree to the terms and conditions";
@@ -202,7 +213,7 @@ export const useFormHandler = (formId) => {
     return !hasError;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, extraData = {}) => {
     e.preventDefault();
     console.log("Form submission started", formData);
 
@@ -215,25 +226,30 @@ export const useFormHandler = (formId) => {
     setSubmitStatus(null);
 
     try {
-      // Clean mobile number - remove all non-digits and country code
-      let cleanMobile = formData.mobile.replace(/[^\d]/g, "");
-      
+      // Clean mobile number - remove all non-digits and country code (guard for SSR/edge)
+      let cleanMobile = (formData.mobile || "").replace(/[^\d]/g, "");
+
       // Remove country code if present (91 for India)
       if (cleanMobile.startsWith("91") && cleanMobile.length > 10) {
         cleanMobile = cleanMobile.substring(2);
       }
-      
+
       // Ensure only 10 digits
       cleanMobile = cleanMobile.slice(0, 10);
 
       const cf7Data = new FormData();
-      cf7Data.append("name", formData.name || (formId === 5862 ? "" : "Not provided"));
-      cf7Data.append("email", formData.email);
+      const safeName = sanitizeText(formData.name || (formId === 5862 ? "" : "Not provided"), "name");
+      const safeMessage = sanitizeText(formData.message || "No message provided", "message");
+      cf7Data.append("name", safeName || (formId === 5862 ? "" : "Not provided"));
+      cf7Data.append("email", formData.email?.trim() || "");
       cf7Data.append("mobile", cleanMobile);
-      cf7Data.append("purpose", formData.purpose);
-      cf7Data.append("company", formData.company);
-      cf7Data.append("message", formData.message || "No message provided");
-      
+      cf7Data.append("purpose", formData.purpose || "");
+      cf7Data.append("company", formData.company || "");
+      cf7Data.append("message", safeMessage || "No message provided");
+      if (extraData.recaptchaToken) {
+        cf7Data.append("g-recaptcha-response", extraData.recaptchaToken);
+      }
+
       // ✅ Append file object properly
       if (formData.resume) {
         cf7Data.append("resume", formData.resume);
