@@ -1,7 +1,5 @@
 "use client";
 
-import Script from "next/script";
-import { useRef, useState, useEffect } from "react";
 import { useFormHandler } from "@/hooks/useFormHandler";
 import {
   PhoneInputField,
@@ -11,92 +9,23 @@ import {
 } from "../Form/FormField";
 import Button from "../Shared/Button";
 
-const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
-const RECAPTCHA_SCRIPT = "https://www.google.com/recaptcha/api.js";
+// reCAPTCHA (commented out – revoke old code)
+// import Script from "next/script";
+// import { useRef, useState, useEffect } from "react";
+// const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+// const RECAPTCHA_SCRIPT = "https://www.google.com/recaptcha/api.js";
 
 const ContactForm = () => {
   const {
     formData,
     handleChange,
     handleSelectChange,
-    handleSubmit: submitForm,
+    handleSubmit,
     isSubmitting,
     submitStatus,
     fieldErrors,
     formId,
   } = useFormHandler(5851);
-
-  const recaptchaContainerRef = useRef(null);
-  const widgetIdRef = useRef(null);
-  const [recaptchaReady, setRecaptchaReady] = useState(false);
-  const [recaptchaError, setRecaptchaError] = useState("");
-
-  // Render reCAPTCHA widget when script has loaded; use grecaptcha.ready() so API is ready
-  useEffect(() => {
-    if (!RECAPTCHA_SITE_KEY || widgetIdRef.current !== null) return;
-
-    const renderWidget = () => {
-      const container = recaptchaContainerRef.current;
-      if (typeof window.grecaptcha === "undefined" || !container) return;
-      try {
-        widgetIdRef.current = window.grecaptcha.render(container, {
-          sitekey: RECAPTCHA_SITE_KEY,
-          theme: "light",
-          size: "normal",
-        });
-      } catch (err) {
-        console.error("reCAPTCHA render error:", err);
-      }
-    };
-
-    const init = () => {
-      if (typeof window.grecaptcha === "undefined") return;
-      if (window.grecaptcha.ready) {
-        window.grecaptcha.ready(renderWidget);
-      } else {
-        renderWidget();
-      }
-    };
-
-    // Small delay so the container ref is attached after mount
-    const t = setTimeout(init, 100);
-    return () => clearTimeout(t);
-  }, [recaptchaReady]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setRecaptchaError("");
-
-    if (!RECAPTCHA_SITE_KEY) {
-      submitForm(e);
-      return;
-    }
-
-    const doSubmit = () => {
-      if (widgetIdRef.current === null) {
-        setRecaptchaError("reCAPTCHA did not load. Please refresh the page and try again.");
-        return;
-      }
-      const token = window.grecaptcha.getResponse(widgetIdRef.current);
-      if (!token) {
-        setRecaptchaError("Please complete the reCAPTCHA verification.");
-        return;
-      }
-      submitForm(e, { recaptchaToken: token });
-      window.grecaptcha.reset(widgetIdRef.current);
-    };
-
-    if (typeof window.grecaptcha === "undefined") {
-      setRecaptchaError("reCAPTCHA is still loading. Please wait a moment and try again.");
-      return;
-    }
-
-    if (window.grecaptcha.ready) {
-      window.grecaptcha.ready(doSubmit);
-    } else {
-      doSubmit();
-    }
-  };
 
   return (
     <div className="lg:mt-7 mt-5 lg:mb-10 mb-5 lg:px-0 px-5">
@@ -105,6 +34,7 @@ const ContactForm = () => {
           What can we help you with?
         </h2>
 
+        {/* reCAPTCHA script (commented out)
         {RECAPTCHA_SITE_KEY && (
           <Script
             src={RECAPTCHA_SCRIPT}
@@ -112,6 +42,7 @@ const ContactForm = () => {
             onLoad={() => setRecaptchaReady(true)}
           />
         )}
+        */}
 
         <form className="lg:mt-10 mt-5" onSubmit={handleSubmit} id={formId}>
           <div className="max-w-4xl mx-auto w-full flex flex-col items-center">
@@ -189,6 +120,7 @@ const ContactForm = () => {
                 )}
               </div>
 
+              {/* reCAPTCHA widget (commented out)
               {RECAPTCHA_SITE_KEY && (
                 <div className="flex flex-col gap-2">
                   <div ref={recaptchaContainerRef} />
@@ -197,6 +129,7 @@ const ContactForm = () => {
                   )}
                 </div>
               )}
+              */}
 
               {submitStatus === "success" && (
                 <div className="text-green-500 text-sm text-center p-3 bg-green-50 rounded">

@@ -216,7 +216,8 @@ export const useFormHandler = (formId) => {
     return !hasError;
   };
 
-  const handleSubmit = async (e, extraData = {}) => {
+  // reCAPTCHA: extraData/recaptchaToken removed – form submits without captcha
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submission started", formData);
 
@@ -250,9 +251,7 @@ export const useFormHandler = (formId) => {
       cf7Data.append("purpose", formData.purpose);
       cf7Data.append("company", formData.company || "");
       cf7Data.append("message", safeMessage || "No message provided");
-      if (extraData.recaptchaToken) {
-        cf7Data.append("g-recaptcha-response", extraData.recaptchaToken);
-      }
+      // if (extraData?.recaptchaToken) cf7Data.append("g-recaptcha-response", extraData.recaptchaToken);
 
       // ✅ Append file object properly
       if (formData.resume) {
