@@ -2,6 +2,7 @@
 
 import { useFormHandler } from "@/hooks/useFormHandler";
 import {
+  // CheckboxField,
   PhoneInputField,
   SelectField,
   TextAreaField,
@@ -9,15 +10,9 @@ import {
 } from "../Form/FormField";
 import Button from "../Shared/Button";
 
-// reCAPTCHA (commented out – revoke old code)
-// import Script from "next/script";
-// import { useRef, useState, useEffect } from "react";
-// const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
-// const RECAPTCHA_SCRIPT = "https://www.google.com/recaptcha/api.js";
-
 const ContactForm = () => {
   const {
-    formData,
+  formData,
     handleChange,
     handleSelectChange,
     handleSubmit,
@@ -33,16 +28,6 @@ const ContactForm = () => {
         <h2 className="text-[#646464] lg:text-2xl text-xl lg:px-0 px-5 text-center">
           What can we help you with?
         </h2>
-
-        {/* reCAPTCHA script (commented out)
-        {RECAPTCHA_SITE_KEY && (
-          <Script
-            src={RECAPTCHA_SCRIPT}
-            strategy="afterInteractive"
-            onLoad={() => setRecaptchaReady(true)}
-          />
-        )}
-        */}
 
         <form className="lg:mt-10 mt-5" onSubmit={handleSubmit} id={formId}>
           <div className="max-w-4xl mx-auto w-full flex flex-col items-center">
@@ -107,29 +92,31 @@ const ContactForm = () => {
                 )}
               </div>
 
-              <div className="">
-                <TextAreaField
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+             <div className="">
+             <TextAreaField
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              {fieldErrors.message && (
+                <span className="text-red-500 text-xs text-start mt-1 block">
+                  {fieldErrors.message}
+                </span>
+              )}
+             </div>
+
+              {/* <div>
+                <CheckboxField
+                  id="sendUsYourQueryForm"
+                  checked={formData.consent}
+                  onChange={handleSelectChange}
                 />
-                {fieldErrors.message && (
+                {fieldErrors.consent && (
                   <span className="text-red-500 text-xs text-start mt-1 block">
-                    {fieldErrors.message}
+                    {fieldErrors.consent}
                   </span>
                 )}
-              </div>
-
-              {/* reCAPTCHA widget (commented out)
-              {RECAPTCHA_SITE_KEY && (
-                <div className="flex flex-col gap-2">
-                  <div ref={recaptchaContainerRef} />
-                  {recaptchaError && (
-                    <span className="text-red-500 text-xs">{recaptchaError}</span>
-                  )}
-                </div>
-              )}
-              */}
+              </div> */}
 
               {submitStatus === "success" && (
                 <div className="text-green-500 text-sm text-center p-3 bg-green-50 rounded">
